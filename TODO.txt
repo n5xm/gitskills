@@ -7,3 +7,25 @@ delete svn
 include和jsp:include
 ssh三大框架
 The price of ZK Pivottable is USD 899/dev/year comes with one  provided by core ZK developers.
+
+配置一下endeavour的数据库
+数据库：endeavour
+用户名：endeavour
+密码：admin
+
+has not update InfoBox_min.js
+淮安淮阴
+淮安金湖
+宿迁宿城
+淮安青浦
+高邮 远程连接不上
+涟水
+淮阴
+========================================================================================
+茅村没法上传
+铜山没图片
+堂张
+
+单集只有平面图
+
+http://msysgit.github.io/
