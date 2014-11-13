@@ -1,4 +1,4 @@
-1¡¢°²×°jdk-6u31-windows-i586.exe£»
+ï»¿1ã€å®‰è£…jdk-6u31-windows-i586.exeï¼›
 CLASSPATH
 .;%JAVA_HOME%/lib/dt.jar;%JAVA_HOME%/lib/tools.jar
 
@@ -7,49 +7,49 @@ JAVA_HOME
 Path
 %JAVA_HOME%/bin;
 
-2¡¢°²×°apache-tomcat-6.0.36.exe£»
-JNativeCpp.dll£¬EncryptUseKey.dll¿½±´µ½tomcat°²×°Ä¿Â¼ÏÂµÄbinÄ¿Â¼ÏÂ£»
+2ã€å®‰è£…apache-tomcat-6.0.36.exeï¼›
+JNativeCpp.dllï¼ŒEncryptUseKey.dllæ‹·è´åˆ°tomcatå®‰è£…ç›®å½•ä¸‹çš„binç›®å½•ä¸‹ï¼›
 -XX:PermSize=512M
 -XX:MaxPermSize=1024M
 
-3¡¢°²×°Oracle£¬Èç¹û²Ù×÷ÏµÍ³ÊÇ64Î»Ğèµ÷Õû°²×°°ü£¬Ê×ÏÈ½âÑ¹£º
-£¨1£©±à¼­°²×°°üÄÚÎÄ¼ş  database/stage/prereq/db/refhost.xml 
-      Ôö¼ÓÏÂÃæ½Úµã
+3ã€å®‰è£…Oracleï¼Œå¦‚æœæ“ä½œç³»ç»Ÿæ˜¯64ä½éœ€è°ƒæ•´å®‰è£…åŒ…ï¼Œé¦–å…ˆè§£å‹ï¼š
+ï¼ˆ1ï¼‰ç¼–è¾‘å®‰è£…åŒ…å†…æ–‡ä»¶  database/stage/prereq/db/refhost.xml 
+      å¢åŠ ä¸‹é¢èŠ‚ç‚¹
       <OPERATING_SYSTEM>      
           <VERSION VALUE="6.1"/>
       </OPERATING_SYSTEM>     
-£¨2£©±à¼­°²×°°üÄÚÎÄ¼ş    database/install/oraparam.ini
-      ÕÒµ½[Certified Versions]Ğ¡½Ú ÔÚÏÂÃæµÄµÚ¶şĞĞÖĞÔö¼Ówindows°æ±¾6.1£¬ÈçÏÂÃæËùÊ¾
+ï¼ˆ2ï¼‰ç¼–è¾‘å®‰è£…åŒ…å†…æ–‡ä»¶    database/install/oraparam.ini
+      æ‰¾åˆ°[Certified Versions]å°èŠ‚ åœ¨ä¸‹é¢çš„ç¬¬äºŒè¡Œä¸­å¢åŠ windowsç‰ˆæœ¬6.1ï¼Œå¦‚ä¸‹é¢æ‰€ç¤º
       Windows=4.0,5.0,5.1,5.2,6.1 
-      ×¢ÒâÒª°Ñwindows Ç°ÃæµÄ"#"È¥µô£¬·ñÔòÎŞĞ§
-£¨3£©Æä´ÎÎÒÃÇ±ØĞë¹Ø±Õwindow7µÄ UAC¡£²»ÒªĞÄ´æ½ÄĞÒ£¬Õâ¶«Î÷¿ª×Å°²×°µ½Ò»°ë¾Í»á±»¿¨×¡£¬¶øÇÒÃ»ÓĞÈÎºÎÌáÊ¾´°Ìå¡£Ö´ĞĞC:/Windows/System32/UserAccountControlSettings.exe °ÑÅÔ±ßµÄ¿ØÖÆ¿éÀ­µ½×îÏÂÃæ¡£
-£¨4£©×îºó£¬ÒªÒÔ¼æÈİĞÎÊ½ÔËĞĞ°²×°³ÌĞò¡£ÓÒ»÷setup.exe  µã»÷ÊôĞÔ-¼æÈİĞÔ- ¹´Ñ¡ÒÔ¼æÈİÄ£Ê½ÔËĞĞÕâ¸ö³ÌĞò £¬ÏÂÀ­ÁĞ±íÖĞÑ¡Ôñwindos xp sp3
-	Ò»ÇĞÍê³ÉÒÔºóµã»÷setup¿ªÊ¼°²×°°É¡£
+      æ³¨æ„è¦æŠŠwindows å‰é¢çš„"#"å»æ‰ï¼Œå¦åˆ™æ— æ•ˆ
+ï¼ˆ3ï¼‰å…¶æ¬¡æˆ‘ä»¬å¿…é¡»å…³é—­window7çš„ UACã€‚ä¸è¦å¿ƒå­˜ä¾¥å¹¸ï¼Œè¿™ä¸œè¥¿å¼€ç€å®‰è£…åˆ°ä¸€åŠå°±ä¼šè¢«å¡ä½ï¼Œè€Œä¸”æ²¡æœ‰ä»»ä½•æç¤ºçª—ä½“ã€‚æ‰§è¡ŒC:/Windows/System32/UserAccountControlSettings.exe æŠŠæ—è¾¹çš„æ§åˆ¶å—æ‹‰åˆ°æœ€ä¸‹é¢ã€‚
+ï¼ˆ4ï¼‰æœ€åï¼Œè¦ä»¥å…¼å®¹å½¢å¼è¿è¡Œå®‰è£…ç¨‹åºã€‚å³å‡»setup.exe  ç‚¹å‡»å±æ€§-å…¼å®¹æ€§- å‹¾é€‰ä»¥å…¼å®¹æ¨¡å¼è¿è¡Œè¿™ä¸ªç¨‹åº ï¼Œä¸‹æ‹‰åˆ—è¡¨ä¸­é€‰æ‹©windos xp sp3
+	ä¸€åˆ‡å®Œæˆä»¥åç‚¹å‡»setupå¼€å§‹å®‰è£…å§ã€‚
 
-4¡¢´´½¨Êı¾İ¿â
-ÊµÀı£ºqxpt
-ÓÃ»§Ãû£ºszla
-ÃÜÂë£ºictehi
+4ã€åˆ›å»ºæ•°æ®åº“
+å®ä¾‹ï¼šqxpt
+ç”¨æˆ·åï¼šszla
+å¯†ç ï¼šictehi
 
-ÊµÀı£ºgrainup
-ÓÃ»§Ãû£ºgrainup
-ÃÜÂë£ºictehi
+å®ä¾‹ï¼šgrainup
+ç”¨æˆ·åï¼šgrainup
+å¯†ç ï¼šictehi
 
-²¢¸³È¨£º
+å¹¶èµ‹æƒï¼š
 create user szla identified by "ictehi";
 grant connect,resource,dba to szla;
 
 create user grainup identified by "ictehi";
 grant connect,resource,dba to grainup;
 
-5¡¢µ¼ÈëÊı¾İ¿â£º
-£¨1£©ÔËĞĞcmd
-£¨2£©
+5ã€å¯¼å…¥æ•°æ®åº“ï¼š
+ï¼ˆ1ï¼‰è¿è¡Œcmd
+ï¼ˆ2ï¼‰
 imp szla/ictehi@qxpt file=d:\Deploy\qxpt_20141028.dmp full=y ignore=y
 imp szla/ictehi@szla file=d:\Deploy\qxpt_20141028.dmp full=y ignore=y
 imp grainup/ictehi@grainup file=d:\Deploy\grainup_20141027.dmp full=y ignore=y
-£¨3£©Êı¾İ³õÊ¼»¯£º
-qxpt£º
+ï¼ˆ3ï¼‰æ•°æ®åˆå§‹åŒ–ï¼š
+qxptï¼š
 delete from yw_cangku;
 delete from yw_cangkuinit;
 delete from yw_instorerecord;
@@ -57,7 +57,7 @@ delete from yw_settlement;
 delete from yw_monivalue;
 delete from yw_graintemp;
 
-grainup£º
+grainupï¼š
 delete from BASIC_LOG;
 delete from B_ALLOT;
 delete from B_ALTERGA;
@@ -74,13 +74,13 @@ delete from yw_cangku;
 delete from yw_graintemp;
 delete from yw_liangku;
 delete from yw_monivalue;
-È»ºó¸ù¾İ¡¶¿Í»§¹ØÏµÒ»ÀÀ±í-Ä¸±í.xlsx¡·³õÊ¼»¯Á¸¿â±í£¬¼ÇµÃÊı¾İ¿âÖĞµÄcodeÒÔ¼°t_codeÃüÃû¹æÔòÎª¿Í»§´úÂëÈ¥µôÖ®Ç°µÄ¡°L¡±£»
+ç„¶åæ ¹æ®ã€Šå®¢æˆ·å…³ç³»ä¸€è§ˆè¡¨-æ¯è¡¨.xlsxã€‹åˆå§‹åŒ–ç²®åº“è¡¨ï¼Œè®°å¾—æ•°æ®åº“ä¸­çš„codeä»¥åŠt_codeå‘½åè§„åˆ™ä¸ºå®¢æˆ·ä»£ç å»æ‰ä¹‹å‰çš„â€œLâ€ï¼›
 
-6¡¢½âÑ¹¡¶ÇøÏØÆ½Ì¨±ê×¼°æ°²×°°ü.zip¡·£¬¡¶ÇøÏØÆ½Ì¨Êı¾İÉÏ±¨ÏµÍ³°²×°°ü.zip¡·£¬È»ºó½«ÆäÏÂÃæµÄÎÄ¼ş¼Ğ²¿Êğtomcat webappsÄ¿Â¼ÏÂ£¬²¢×¢ÒâĞŞ¸ÄÅäÖÃÎÄ¼şÖĞµÄÊı¾İ¿âÅäÖÃ£¬ÕâÀï²»ÔÙÀÛÊö¡£
+6ã€è§£å‹ã€ŠåŒºå¿å¹³å°æ ‡å‡†ç‰ˆå®‰è£…åŒ….zipã€‹ï¼Œã€ŠåŒºå¿å¹³å°æ•°æ®ä¸ŠæŠ¥ç³»ç»Ÿå®‰è£…åŒ….zipã€‹ï¼Œç„¶åå°†å…¶ä¸‹é¢çš„æ–‡ä»¶å¤¹éƒ¨ç½²tomcat webappsç›®å½•ä¸‹ï¼Œå¹¶æ³¨æ„ä¿®æ”¹é…ç½®æ–‡ä»¶ä¸­çš„æ•°æ®åº“é…ç½®ï¼Œè¿™é‡Œä¸å†ç´¯è¿°ã€‚
 
 Tip:
 tomcat Automatic,PermSize
-grainupÊı¾İ¿âM_USERĞèÒªĞŞ¸ÄRFID!!!
+grainupæ•°æ®åº“M_USERéœ€è¦ä¿®æ”¹RFID!!!
 sqlplus sys/ictehi@szla as sysdba
 sqlplus szla/ictehi@szla
 
@@ -92,276 +92,276 @@ full=y
 exp grainup/ictehi@grainup file=c:\grainup_20141027.dmp
 
 select * from t_province t
-where t.proName='½­ËÕÊ¡'
+where t.proName='æ±Ÿè‹çœ'
 select * from t_city t
-where t.cityname='ÑÎ³ÇÊĞ'
+where t.cityname='ç›åŸå¸‚'
 select * from t_district t
-where t.disName='¸·ÄşÏØ'
+where t.disName='é˜œå®å¿'
 10 69 725
 
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('¸·ÄşÏØ·á¶ÕÁ¸¿â',0,1,10,69,725,'32092301');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('¸·ÄşÏØ³Â¼¯Á¸ÓÍ¹ÜÀíËù',0,1,10,69,725,'32092302');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('¸·ÄşÏØ³ÂÁ¼Á¸¿â',0,1,10,69,725,'32092303');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('¸·ÄşÏØºÏÀûÁ¸ÓÍ¹ÜÀíËù',0,1,10,69,725,'32092304');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('¸·ÄşÏØË¶¼¯Á¸ÓÍ¹ÜÀíËù',0,1,10,69,725,'32092305');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('¸·ÄşÏØ½ÇÏïÁ¸¿â',0,1,10,69,725,'32092306');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('¸·ÄşÏØÂŞÇÅÁ¸ÓÍ¹ÜÀíËù',0,1,10,69,725,'32092307');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('¸·ÄşÏØ¹«ĞËÁ¸¿â',0,1,10,69,725,'32092308');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('¸·ÄşÏØ³ÂÉáÁ¸¿â',0,1,10,69,725,'32092309');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('¸·ÄşÏØÑòÕ¯Á¸ÓÍ¹ÜÀíËù',0,1,10,69,725,'32092310');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('¸·ÄşÏØÂ«ÆÑÁ¸ÓÍ¹ÜÀíËù',0,1,10,69,725,'32092311');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('¸·ÄşÏØ·ï¹ÈÁ¸¿â',0,1,10,69,725,'32092312');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é˜œå®å¿ä¸°å¢©ç²®åº“',0,1,10,69,725,'32092301');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é˜œå®å¿é™ˆé›†ç²®æ²¹ç®¡ç†æ‰€',0,1,10,69,725,'32092302');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é˜œå®å¿é™ˆè‰¯ç²®åº“',0,1,10,69,725,'32092303');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é˜œå®å¿åˆåˆ©ç²®æ²¹ç®¡ç†æ‰€',0,1,10,69,725,'32092304');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é˜œå®å¿ç¡•é›†ç²®æ²¹ç®¡ç†æ‰€',0,1,10,69,725,'32092305');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é˜œå®å¿è§’å··ç²®åº“',0,1,10,69,725,'32092306');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é˜œå®å¿ç½—æ¡¥ç²®æ²¹ç®¡ç†æ‰€',0,1,10,69,725,'32092307');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é˜œå®å¿å…¬å…´ç²®åº“',0,1,10,69,725,'32092308');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é˜œå®å¿é™ˆèˆç²®åº“',0,1,10,69,725,'32092309');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é˜œå®å¿ç¾Šå¯¨ç²®æ²¹ç®¡ç†æ‰€',0,1,10,69,725,'32092310');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é˜œå®å¿èŠ¦è’²ç²®æ²¹ç®¡ç†æ‰€',0,1,10,69,725,'32092311');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é˜œå®å¿å‡¤è°·ç²®åº“',0,1,10,69,725,'32092312');
 
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('¸·ÄşÏØ·á¶ÕÁ¸¿â','¸·ÄşÏØ·á¶ÕÁ¸¿â',0,1,10,69,725,'32092301',1);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('¸·ÄşÏØ³Â¼¯Á¸ÓÍ¹ÜÀíËù','¸·ÄşÏØ³Â¼¯Á¸ÓÍ¹ÜÀíËù',0,1,10,69,725,'32092302',2);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('¸·ÄşÏØ³ÂÁ¼Á¸¿â','¸·ÄşÏØ³ÂÁ¼Á¸¿â',0,1,10,69,725,'32092303',3);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('¸·ÄşÏØºÏÀûÁ¸ÓÍ¹ÜÀíËù','¸·ÄşÏØºÏÀûÁ¸ÓÍ¹ÜÀíËù',0,1,10,69,725,'32092304',4);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('¸·ÄşÏØË¶¼¯Á¸ÓÍ¹ÜÀíËù','¸·ÄşÏØË¶¼¯Á¸ÓÍ¹ÜÀíËù',0,1,10,69,725,'32092305',5);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('¸·ÄşÏØ½ÇÏïÁ¸¿â','¸·ÄşÏØ½ÇÏïÁ¸¿â',0,1,10,69,725,'32092306',6);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('¸·ÄşÏØÂŞÇÅÁ¸ÓÍ¹ÜÀíËù','¸·ÄşÏØÂŞÇÅÁ¸ÓÍ¹ÜÀíËù',0,1,10,69,725,'32092307',7);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('¸·ÄşÏØ¹«ĞËÁ¸¿â','¸·ÄşÏØ¹«ĞËÁ¸¿â',0,1,10,69,725,'32092308',8);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('¸·ÄşÏØ³ÂÉáÁ¸¿â','¸·ÄşÏØ³ÂÉáÁ¸¿â',0,1,10,69,725,'32092309',9);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('¸·ÄşÏØÑòÕ¯Á¸ÓÍ¹ÜÀíËù','¸·ÄşÏØÑòÕ¯Á¸ÓÍ¹ÜÀíËù',0,1,10,69,725,'32092310',10);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('¸·ÄşÏØÂ«ÆÑÁ¸ÓÍ¹ÜÀíËù','¸·ÄşÏØÂ«ÆÑÁ¸ÓÍ¹ÜÀíËù',0,1,10,69,725,'32092311',11);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('¸·ÄşÏØ·ï¹ÈÁ¸¿â','¸·ÄşÏØ·ï¹ÈÁ¸¿â',0,1,10,69,725,'32092312',12);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é˜œå®å¿ä¸°å¢©ç²®åº“','é˜œå®å¿ä¸°å¢©ç²®åº“',0,1,10,69,725,'32092301',1);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é˜œå®å¿é™ˆé›†ç²®æ²¹ç®¡ç†æ‰€','é˜œå®å¿é™ˆé›†ç²®æ²¹ç®¡ç†æ‰€',0,1,10,69,725,'32092302',2);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é˜œå®å¿é™ˆè‰¯ç²®åº“','é˜œå®å¿é™ˆè‰¯ç²®åº“',0,1,10,69,725,'32092303',3);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é˜œå®å¿åˆåˆ©ç²®æ²¹ç®¡ç†æ‰€','é˜œå®å¿åˆåˆ©ç²®æ²¹ç®¡ç†æ‰€',0,1,10,69,725,'32092304',4);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é˜œå®å¿ç¡•é›†ç²®æ²¹ç®¡ç†æ‰€','é˜œå®å¿ç¡•é›†ç²®æ²¹ç®¡ç†æ‰€',0,1,10,69,725,'32092305',5);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é˜œå®å¿è§’å··ç²®åº“','é˜œå®å¿è§’å··ç²®åº“',0,1,10,69,725,'32092306',6);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é˜œå®å¿ç½—æ¡¥ç²®æ²¹ç®¡ç†æ‰€','é˜œå®å¿ç½—æ¡¥ç²®æ²¹ç®¡ç†æ‰€',0,1,10,69,725,'32092307',7);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é˜œå®å¿å…¬å…´ç²®åº“','é˜œå®å¿å…¬å…´ç²®åº“',0,1,10,69,725,'32092308',8);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é˜œå®å¿é™ˆèˆç²®åº“','é˜œå®å¿é™ˆèˆç²®åº“',0,1,10,69,725,'32092309',9);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é˜œå®å¿ç¾Šå¯¨ç²®æ²¹ç®¡ç†æ‰€','é˜œå®å¿ç¾Šå¯¨ç²®æ²¹ç®¡ç†æ‰€',0,1,10,69,725,'32092310',10);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é˜œå®å¿èŠ¦è’²ç²®æ²¹ç®¡ç†æ‰€','é˜œå®å¿èŠ¦è’²ç²®æ²¹ç®¡ç†æ‰€',0,1,10,69,725,'32092311',11);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é˜œå®å¿å‡¤è°·ç²®åº“','é˜œå®å¿å‡¤è°·ç²®åº“',0,1,10,69,725,'32092312',12);
 
 select * from t_city t
-where t.cityname='ËŞÇ¨ÊĞ'
+where t.cityname='å®¿è¿å¸‚'
 select * from t_district t
-where t.disName='ãôÑôÏØ'
+where t.disName='æ³—é˜³å¿'
 10 75 772
 
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ãôÑôÏØ¾üÁ¸¹©Ó¦Õ¾',0,1,10,75,772,'32132301');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ãôÑôÏØÁ¸Ê³¹ºÏú×Ü¹«Ë¾°®Ô°Á¸¿â',0,1,10,75,772,'32132302');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ãôÑôÏØÂ¬¼¯Á¸Ê³´¢ÏúÓĞÏŞ¹«Ë¾',0,1,10,75,772,'32132303');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ³—é˜³å¿å†›ç²®ä¾›åº”ç«™',0,1,10,75,772,'32132301');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ³—é˜³å¿ç²®é£Ÿè´­é”€æ€»å…¬å¸çˆ±å›­ç²®åº“',0,1,10,75,772,'32132302');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ³—é˜³å¿å¢é›†ç²®é£Ÿå‚¨é”€æœ‰é™å…¬å¸',0,1,10,75,772,'32132303');
 
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ãôÑôÏØ¾üÁ¸¹©Ó¦Õ¾','ãôÑôÏØ¾üÁ¸¹©Ó¦Õ¾',0,1,10,75,772,'32132301',1);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ãôÑôÏØÁ¸Ê³¹ºÏú×Ü¹«Ë¾°®Ô°Á¸¿â','ãôÑôÏØÁ¸Ê³¹ºÏú×Ü¹«Ë¾°®Ô°Á¸¿â',0,1,10,75,772,'32132302',2);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ãôÑôÏØÂ¬¼¯Á¸Ê³´¢ÏúÓĞÏŞ¹«Ë¾','ãôÑôÏØÂ¬¼¯Á¸Ê³´¢ÏúÓĞÏŞ¹«Ë¾',0,1,10,75,772,'32132303',3);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ³—é˜³å¿å†›ç²®ä¾›åº”ç«™','æ³—é˜³å¿å†›ç²®ä¾›åº”ç«™',0,1,10,75,772,'32132301',1);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ³—é˜³å¿ç²®é£Ÿè´­é”€æ€»å…¬å¸çˆ±å›­ç²®åº“','æ³—é˜³å¿ç²®é£Ÿè´­é”€æ€»å…¬å¸çˆ±å›­ç²®åº“',0,1,10,75,772,'32132302',2);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ³—é˜³å¿å¢é›†ç²®é£Ÿå‚¨é”€æœ‰é™å…¬å¸','æ³—é˜³å¿å¢é›†ç²®é£Ÿå‚¨é”€æœ‰é™å…¬å¸',0,1,10,75,772,'32132303',3);
 
 select * from t_city t
-where t.cityname='»´°²ÊĞ'
+where t.cityname='æ·®å®‰å¸‚'
 select * from t_district t
-where t.disName='Á°Ë®ÏØ'
+where t.disName='æ¶Ÿæ°´å¿'
 10 71 745
 
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØ²íÃíÁ¸ÓÍ¹ÜÀíËù',0,1,10,71,745,'32082601');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØĞì¼¯Á¸¹ÜËù',0,1,10,71,745,'32082602');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØÄÏ¼¯Á¸¹ÜËù',0,1,10,71,745,'32082603');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØ»ÆÓªÁ¸¹ÜËù',0,1,10,71,745,'32082604');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØÄÏÂ»Á¸¹ÜËù',0,1,10,71,745,'32082605');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØ·½¶ÉÁ¸¹ÜËù',0,1,10,71,745,'32082606');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØ±£Ì²Á¸¹ÜËù',0,1,10,71,745,'32082607');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØĞ¡Àî¼¯Á¸Ê³ÓÍÁÏ¹ÜÀíËù',0,1,10,71,745,'32082608');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØÊ±ÂëÁ¸¹ÜËù',0,1,10,71,745,'32082609');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØ´ó¶«Á¸¹ÜËù',0,1,10,71,745,'32082610');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØ¶«ºú¼¯Á¸¹ÜËù',0,1,10,71,745,'32082611');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØÇ³¼¯Á¸¹ÜËù',0,1,10,71,745,'32082612');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØ»Ò¶ÕÁ¸¹ÜËù',0,1,10,71,745,'32082613');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØÒåĞËÁ¸ÓÍ¹ÜÀíËù',0,1,10,71,745,'32082614');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØÑî¿ÚÁ¸¹ÜËù',0,1,10,71,745,'32082615');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØ³ÂÊ¦Á¸¹ÜËù',0,1,10,71,745,'32082616');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØÇ°½øÁ¸¹ÜËù',0,1,10,71,745,'32082617');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØÂé¶çÁ¸¹ÜËù',0,1,10,71,745,'32082618');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØÓàÛ×Á¸¹ÜËù',0,1,10,71,745,'32082619');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('½­ËÕÁ°Ë®¹ú¼ÒÁ¸Ê³´¢±¸¿â',0,1,10,71,745,'32082620');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØÆì¸ËÁ¸¿â',0,1,10,71,745,'32082621');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØ±±¼¯Á¸¹ÜËù',0,1,10,71,745,'32082622');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØÅÆ·»Á¸¹ÜËù',0,1,10,71,745,'32082623');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØºÓÍøÁ¸¹ÜËù',0,1,10,71,745,'32082624');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØºìÒ¤Á¸¹ÜËù',0,1,10,71,745,'32082625');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØ½¯âÖÁ¸¹ÜËù',0,1,10,71,745,'32082626');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØ³É¼¯Á¸¹ÜËù',0,1,10,71,745,'32082627');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Á°Ë®ÏØÊ¯ºşÁ¸¹ÜËù',0,1,10,71,745,'32082628');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿å²”åº™ç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,745,'32082601');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿å¾é›†ç²®ç®¡æ‰€',0,1,10,71,745,'32082602');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿å—é›†ç²®ç®¡æ‰€',0,1,10,71,745,'32082603');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿é»„è¥ç²®ç®¡æ‰€',0,1,10,71,745,'32082604');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿å—ç¦„ç²®ç®¡æ‰€',0,1,10,71,745,'32082605');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿æ–¹æ¸¡ç²®ç®¡æ‰€',0,1,10,71,745,'32082606');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿ä¿æ»©ç²®ç®¡æ‰€',0,1,10,71,745,'32082607');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿å°æé›†ç²®é£Ÿæ²¹æ–™ç®¡ç†æ‰€',0,1,10,71,745,'32082608');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿æ—¶ç ç²®ç®¡æ‰€',0,1,10,71,745,'32082609');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿å¤§ä¸œç²®ç®¡æ‰€',0,1,10,71,745,'32082610');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿ä¸œèƒ¡é›†ç²®ç®¡æ‰€',0,1,10,71,745,'32082611');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿æµ…é›†ç²®ç®¡æ‰€',0,1,10,71,745,'32082612');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿ç°å¢©ç²®ç®¡æ‰€',0,1,10,71,745,'32082613');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿ä¹‰å…´ç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,745,'32082614');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿æ¨å£ç²®ç®¡æ‰€',0,1,10,71,745,'32082615');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿é™ˆå¸ˆç²®ç®¡æ‰€',0,1,10,71,745,'32082616');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿å‰è¿›ç²®ç®¡æ‰€',0,1,10,71,745,'32082617');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿éº»å‰ç²®ç®¡æ‰€',0,1,10,71,745,'32082618');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿ä½™åœ©ç²®ç®¡æ‰€',0,1,10,71,745,'32082619');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ±Ÿè‹æ¶Ÿæ°´å›½å®¶ç²®é£Ÿå‚¨å¤‡åº“',0,1,10,71,745,'32082620');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿æ——æ†ç²®åº“',0,1,10,71,745,'32082621');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿åŒ—é›†ç²®ç®¡æ‰€',0,1,10,71,745,'32082622');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿ç‰ŒåŠç²®ç®¡æ‰€',0,1,10,71,745,'32082623');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿æ²³ç½‘ç²®ç®¡æ‰€',0,1,10,71,745,'32082624');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿çº¢çª‘ç²®ç®¡æ‰€',0,1,10,71,745,'32082625');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿è’‹åºµç²®ç®¡æ‰€',0,1,10,71,745,'32082626');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿æˆé›†ç²®ç®¡æ‰€',0,1,10,71,745,'32082627');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ¶Ÿæ°´å¿çŸ³æ¹–ç²®ç®¡æ‰€',0,1,10,71,745,'32082628');
 
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØ²íÃíÁ¸ÓÍ¹ÜÀíËù','Á°Ë®ÏØ²íÃíÁ¸ÓÍ¹ÜÀíËù',0,1,10,71,745,'32082601',1);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØĞì¼¯Á¸¹ÜËù','Á°Ë®ÏØĞì¼¯Á¸¹ÜËù',0,1,10,71,745,'32082602',2);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØÄÏ¼¯Á¸¹ÜËù','Á°Ë®ÏØÄÏ¼¯Á¸¹ÜËù',0,1,10,71,745,'32082603',3);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØ»ÆÓªÁ¸¹ÜËù','Á°Ë®ÏØ»ÆÓªÁ¸¹ÜËù',0,1,10,71,745,'32082604',4);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØÄÏÂ»Á¸¹ÜËù','Á°Ë®ÏØÄÏÂ»Á¸¹ÜËù',0,1,10,71,745,'32082605',5);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØ·½¶ÉÁ¸¹ÜËù','Á°Ë®ÏØ·½¶ÉÁ¸¹ÜËù',0,1,10,71,745,'32082606',6);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØ±£Ì²Á¸¹ÜËù','Á°Ë®ÏØ±£Ì²Á¸¹ÜËù',0,1,10,71,745,'32082607',7);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØĞ¡Àî¼¯Á¸Ê³ÓÍÁÏ¹ÜÀíËù','Á°Ë®ÏØĞ¡Àî¼¯Á¸Ê³ÓÍÁÏ¹ÜÀíËù',0,1,10,71,745,'32082608',8);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØÊ±ÂëÁ¸¹ÜËù','Á°Ë®ÏØÊ±ÂëÁ¸¹ÜËù',0,1,10,71,745,'32082609',9);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØ´ó¶«Á¸¹ÜËù','Á°Ë®ÏØ´ó¶«Á¸¹ÜËù',0,1,10,71,745,'32082610',10);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØ¶«ºú¼¯Á¸¹ÜËù','Á°Ë®ÏØ¶«ºú¼¯Á¸¹ÜËù',0,1,10,71,745,'32082611',11);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØÇ³¼¯Á¸¹ÜËù','Á°Ë®ÏØÇ³¼¯Á¸¹ÜËù',0,1,10,71,745,'32082612',12);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØ»Ò¶ÕÁ¸¹ÜËù','Á°Ë®ÏØ»Ò¶ÕÁ¸¹ÜËù',0,1,10,71,745,'32082613',13);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØÒåĞËÁ¸ÓÍ¹ÜÀíËù','Á°Ë®ÏØÒåĞËÁ¸ÓÍ¹ÜÀíËù',0,1,10,71,745,'32082614',14);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØÑî¿ÚÁ¸¹ÜËù','Á°Ë®ÏØÑî¿ÚÁ¸¹ÜËù',0,1,10,71,745,'32082615',15);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØ³ÂÊ¦Á¸¹ÜËù','Á°Ë®ÏØ³ÂÊ¦Á¸¹ÜËù',0,1,10,71,745,'32082616',16);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØÇ°½øÁ¸¹ÜËù','Á°Ë®ÏØÇ°½øÁ¸¹ÜËù',0,1,10,71,745,'32082617',17);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØÂé¶çÁ¸¹ÜËù','Á°Ë®ÏØÂé¶çÁ¸¹ÜËù',0,1,10,71,745,'32082618',18);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØÓàÛ×Á¸¹ÜËù','Á°Ë®ÏØÓàÛ×Á¸¹ÜËù',0,1,10,71,745,'32082619',19);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('½­ËÕÁ°Ë®¹ú¼ÒÁ¸Ê³´¢±¸¿â','½­ËÕÁ°Ë®¹ú¼ÒÁ¸Ê³´¢±¸¿â',0,1,10,71,745,'32082620',20);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØÆì¸ËÁ¸¿â','Á°Ë®ÏØÆì¸ËÁ¸¿â',0,1,10,71,745,'32082621',21);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØ±±¼¯Á¸¹ÜËù','Á°Ë®ÏØ±±¼¯Á¸¹ÜËù',0,1,10,71,745,'32082622',22);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØÅÆ·»Á¸¹ÜËù','Á°Ë®ÏØÅÆ·»Á¸¹ÜËù',0,1,10,71,745,'32082623',23);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØºÓÍøÁ¸¹ÜËù','Á°Ë®ÏØºÓÍøÁ¸¹ÜËù',0,1,10,71,745,'32082624',24);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØºìÒ¤Á¸¹ÜËù','Á°Ë®ÏØºìÒ¤Á¸¹ÜËù',0,1,10,71,745,'32082625',25);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØ½¯âÖÁ¸¹ÜËù','Á°Ë®ÏØ½¯âÖÁ¸¹ÜËù',0,1,10,71,745,'32082626',26);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØ³É¼¯Á¸¹ÜËù','Á°Ë®ÏØ³É¼¯Á¸¹ÜËù',0,1,10,71,745,'32082627',27);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Á°Ë®ÏØÊ¯ºşÁ¸¹ÜËù','Á°Ë®ÏØÊ¯ºşÁ¸¹ÜËù',0,1,10,71,745,'32082628',28);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿å²”åº™ç²®æ²¹ç®¡ç†æ‰€','æ¶Ÿæ°´å¿å²”åº™ç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,745,'32082601',1);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿å¾é›†ç²®ç®¡æ‰€','æ¶Ÿæ°´å¿å¾é›†ç²®ç®¡æ‰€',0,1,10,71,745,'32082602',2);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿å—é›†ç²®ç®¡æ‰€','æ¶Ÿæ°´å¿å—é›†ç²®ç®¡æ‰€',0,1,10,71,745,'32082603',3);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿é»„è¥ç²®ç®¡æ‰€','æ¶Ÿæ°´å¿é»„è¥ç²®ç®¡æ‰€',0,1,10,71,745,'32082604',4);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿å—ç¦„ç²®ç®¡æ‰€','æ¶Ÿæ°´å¿å—ç¦„ç²®ç®¡æ‰€',0,1,10,71,745,'32082605',5);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿æ–¹æ¸¡ç²®ç®¡æ‰€','æ¶Ÿæ°´å¿æ–¹æ¸¡ç²®ç®¡æ‰€',0,1,10,71,745,'32082606',6);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿ä¿æ»©ç²®ç®¡æ‰€','æ¶Ÿæ°´å¿ä¿æ»©ç²®ç®¡æ‰€',0,1,10,71,745,'32082607',7);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿å°æé›†ç²®é£Ÿæ²¹æ–™ç®¡ç†æ‰€','æ¶Ÿæ°´å¿å°æé›†ç²®é£Ÿæ²¹æ–™ç®¡ç†æ‰€',0,1,10,71,745,'32082608',8);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿æ—¶ç ç²®ç®¡æ‰€','æ¶Ÿæ°´å¿æ—¶ç ç²®ç®¡æ‰€',0,1,10,71,745,'32082609',9);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿å¤§ä¸œç²®ç®¡æ‰€','æ¶Ÿæ°´å¿å¤§ä¸œç²®ç®¡æ‰€',0,1,10,71,745,'32082610',10);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿ä¸œèƒ¡é›†ç²®ç®¡æ‰€','æ¶Ÿæ°´å¿ä¸œèƒ¡é›†ç²®ç®¡æ‰€',0,1,10,71,745,'32082611',11);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿æµ…é›†ç²®ç®¡æ‰€','æ¶Ÿæ°´å¿æµ…é›†ç²®ç®¡æ‰€',0,1,10,71,745,'32082612',12);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿ç°å¢©ç²®ç®¡æ‰€','æ¶Ÿæ°´å¿ç°å¢©ç²®ç®¡æ‰€',0,1,10,71,745,'32082613',13);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿ä¹‰å…´ç²®æ²¹ç®¡ç†æ‰€','æ¶Ÿæ°´å¿ä¹‰å…´ç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,745,'32082614',14);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿æ¨å£ç²®ç®¡æ‰€','æ¶Ÿæ°´å¿æ¨å£ç²®ç®¡æ‰€',0,1,10,71,745,'32082615',15);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿é™ˆå¸ˆç²®ç®¡æ‰€','æ¶Ÿæ°´å¿é™ˆå¸ˆç²®ç®¡æ‰€',0,1,10,71,745,'32082616',16);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿å‰è¿›ç²®ç®¡æ‰€','æ¶Ÿæ°´å¿å‰è¿›ç²®ç®¡æ‰€',0,1,10,71,745,'32082617',17);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿éº»å‰ç²®ç®¡æ‰€','æ¶Ÿæ°´å¿éº»å‰ç²®ç®¡æ‰€',0,1,10,71,745,'32082618',18);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿ä½™åœ©ç²®ç®¡æ‰€','æ¶Ÿæ°´å¿ä½™åœ©ç²®ç®¡æ‰€',0,1,10,71,745,'32082619',19);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ±Ÿè‹æ¶Ÿæ°´å›½å®¶ç²®é£Ÿå‚¨å¤‡åº“','æ±Ÿè‹æ¶Ÿæ°´å›½å®¶ç²®é£Ÿå‚¨å¤‡åº“',0,1,10,71,745,'32082620',20);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿æ——æ†ç²®åº“','æ¶Ÿæ°´å¿æ——æ†ç²®åº“',0,1,10,71,745,'32082621',21);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿åŒ—é›†ç²®ç®¡æ‰€','æ¶Ÿæ°´å¿åŒ—é›†ç²®ç®¡æ‰€',0,1,10,71,745,'32082622',22);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿ç‰ŒåŠç²®ç®¡æ‰€','æ¶Ÿæ°´å¿ç‰ŒåŠç²®ç®¡æ‰€',0,1,10,71,745,'32082623',23);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿æ²³ç½‘ç²®ç®¡æ‰€','æ¶Ÿæ°´å¿æ²³ç½‘ç²®ç®¡æ‰€',0,1,10,71,745,'32082624',24);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿çº¢çª‘ç²®ç®¡æ‰€','æ¶Ÿæ°´å¿çº¢çª‘ç²®ç®¡æ‰€',0,1,10,71,745,'32082625',25);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿è’‹åºµç²®ç®¡æ‰€','æ¶Ÿæ°´å¿è’‹åºµç²®ç®¡æ‰€',0,1,10,71,745,'32082626',26);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿æˆé›†ç²®ç®¡æ‰€','æ¶Ÿæ°´å¿æˆé›†ç²®ç®¡æ‰€',0,1,10,71,745,'32082627',27);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ¶Ÿæ°´å¿çŸ³æ¹–ç²®ç®¡æ‰€','æ¶Ÿæ°´å¿çŸ³æ¹–ç²®ç®¡æ‰€',0,1,10,71,745,'32082628',28);
 
 select * from t_city t
-where t.cityname='ÑïÖİÊĞ'
+where t.cityname='æ‰¬å·å¸‚'
 select * from t_district t
-where t.disName='¸ßÓÊÊĞ'
+where t.disName='é«˜é‚®å¸‚'
 10 68 714
 
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('µé¶âÁ¸ÓÍ¾­Óª¹«Ë¾',0,1,10,68,714,'32108401');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ÁÙÔóÁ¸ÓÍ¾­Óª¹«Ë¾',0,1,10,68,714,'32108402');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ÁâÌÁÁ¸ÓÍ¾­Óª¹«Ë¾',0,1,10,68,714,'32108403');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('µé¶âÁ¸ÓÍ¾­Óª¹«Ë¾É³ÑßÊÕ´¢¿â',0,1,10,68,714,'32108404');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('¸Ê¶âÁ¸ÓÍ¾­Óª¹«Ë¾',0,1,10,68,714,'32108405');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ÌìÉ½ÊÕ´¢¿â',0,1,10,68,714,'32108406');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('°ËÇÅÁ¸ÓÍ¾­Óª¹«Ë¾',0,1,10,68,714,'32108407');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ººÁô¹ú¼ÒÁ¸Ê³´¢±¸',0,1,10,68,714,'32108408');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ç”¸å›ç²®æ²¹ç»è¥å…¬å¸',0,1,10,68,714,'32108401');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ä¸´æ³½ç²®æ²¹ç»è¥å…¬å¸',0,1,10,68,714,'32108402');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('è±å¡˜ç²®æ²¹ç»è¥å…¬å¸',0,1,10,68,714,'32108403');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ç”¸å›ç²®æ²¹ç»è¥å…¬å¸æ²™å °æ”¶å‚¨åº“',0,1,10,68,714,'32108404');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ç”˜å›ç²®æ²¹ç»è¥å…¬å¸',0,1,10,68,714,'32108405');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('å¤©å±±æ”¶å‚¨åº“',0,1,10,68,714,'32108406');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('å…«æ¡¥ç²®æ²¹ç»è¥å…¬å¸',0,1,10,68,714,'32108407');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ±‰ç•™å›½å®¶ç²®é£Ÿå‚¨å¤‡',0,1,10,68,714,'32108408');
 
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('µé¶âÁ¸ÓÍ¾­Óª¹«Ë¾','µé¶âÁ¸ÓÍ¾­Óª¹«Ë¾',0,1,10,68,714,'32108401',1);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ÁÙÔóÁ¸ÓÍ¾­Óª¹«Ë¾','ÁÙÔóÁ¸ÓÍ¾­Óª¹«Ë¾',0,1,10,68,714,'32108402',2);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ÁâÌÁÁ¸ÓÍ¾­Óª¹«Ë¾','ÁâÌÁÁ¸ÓÍ¾­Óª¹«Ë¾',0,1,10,68,714,'32108403',3);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('µé¶âÁ¸ÓÍ¾­Óª¹«Ë¾É³ÑßÊÕ´¢¿â','µé¶âÁ¸ÓÍ¾­Óª¹«Ë¾É³ÑßÊÕ´¢¿â',0,1,10,68,714,'32108404',4);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('¸Ê¶âÁ¸ÓÍ¾­Óª¹«Ë¾','¸Ê¶âÁ¸ÓÍ¾­Óª¹«Ë¾',0,1,10,68,714,'32108405',5);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ÌìÉ½ÊÕ´¢¿â','ÌìÉ½ÊÕ´¢¿â',0,1,10,68,714,'32108406',6);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('°ËÇÅÁ¸ÓÍ¾­Óª¹«Ë¾','°ËÇÅÁ¸ÓÍ¾­Óª¹«Ë¾',0,1,10,68,714,'32108407',7);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ººÁô¹ú¼ÒÁ¸Ê³´¢±¸','ººÁô¹ú¼ÒÁ¸Ê³´¢±¸',0,1,10,68,714,'32108408',8);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ç”¸å›ç²®æ²¹ç»è¥å…¬å¸','ç”¸å›ç²®æ²¹ç»è¥å…¬å¸',0,1,10,68,714,'32108401',1);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ä¸´æ³½ç²®æ²¹ç»è¥å…¬å¸','ä¸´æ³½ç²®æ²¹ç»è¥å…¬å¸',0,1,10,68,714,'32108402',2);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('è±å¡˜ç²®æ²¹ç»è¥å…¬å¸','è±å¡˜ç²®æ²¹ç»è¥å…¬å¸',0,1,10,68,714,'32108403',3);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ç”¸å›ç²®æ²¹ç»è¥å…¬å¸æ²™å °æ”¶å‚¨åº“','ç”¸å›ç²®æ²¹ç»è¥å…¬å¸æ²™å °æ”¶å‚¨åº“',0,1,10,68,714,'32108404',4);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ç”˜å›ç²®æ²¹ç»è¥å…¬å¸','ç”˜å›ç²®æ²¹ç»è¥å…¬å¸',0,1,10,68,714,'32108405',5);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('å¤©å±±æ”¶å‚¨åº“','å¤©å±±æ”¶å‚¨åº“',0,1,10,68,714,'32108406',6);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('å…«æ¡¥ç²®æ²¹ç»è¥å…¬å¸','å…«æ¡¥ç²®æ²¹ç»è¥å…¬å¸',0,1,10,68,714,'32108407',7);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ±‰ç•™å›½å®¶ç²®é£Ÿå‚¨å¤‡','æ±‰ç•™å›½å®¶ç²®é£Ÿå‚¨å¤‡',0,1,10,68,714,'32108408',8);
 
 select * from t_city t
-where t.cityname='»´°²ÊĞ'
+where t.cityname='æ·®å®‰å¸‚'
 select * from t_district t
-where t.disName='½ğºşÏØ'
+where t.disName='é‡‘æ¹–å¿'
 10 71 748
 
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('½ğºşÏØÀè³ÇÁ¸ÓÍ¹ÜÀíËù',0,1,10,71,748,'32083101');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('½ğºşÏØ´÷Â¥Á¸ÓÍ¹ÜÀíËù',0,1,10,71,748,'32083102');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('½ğºşÏØ½ğÄÏÁ¸ÓÍ¹ÜÀíËù',0,1,10,71,748,'32083103');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('½ğºşÏØãÉÇÅÁ¸ÓÍ¹ÜÀíËù',0,1,10,71,748,'32083104');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('½ğºşÏØËş¼¯Á¸ÓÍ¹ÜÀíËù',0,1,10,71,748,'32083105');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('½ğºşÏØÒø¼¯Á¸ÓÍ¹ÜÀíËù',0,1,10,71,748,'32083106');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('½ğºşÏØÍ¿¹µÁ¸ÓÍ¹ÜÀíËù',0,1,10,71,748,'32083107');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('½ğºşÏØÇ°·æÁ¸ÓÍ¹ÜÀíËù',0,1,10,71,748,'32083108');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('½ğºşÏØÂÀÁ¼Á¸ÓÍ¹ÜÀíËù',0,1,10,71,748,'32083109');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('½ğºşÏØ½ğ±±Á¸ÓÍ¹ÜÀíËù',0,1,10,71,748,'32083110');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('½ğºşÏØÁ¸Ê³¾ÖÊ¯¸ÛÁ¸¿â',0,1,10,71,748,'32083111');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('½­ËÕÊ¡³ÂÇÅÁ¸Ê³´¢±¸Ö±Êô¿â',0,1,10,71,748,'32083112');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é‡‘æ¹–å¿é»åŸç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,748,'32083101');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é‡‘æ¹–å¿æˆ´æ¥¼ç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,748,'32083102');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é‡‘æ¹–å¿é‡‘å—ç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,748,'32083103');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é‡‘æ¹–å¿é—µæ¡¥ç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,748,'32083104');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é‡‘æ¹–å¿å¡”é›†ç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,748,'32083105');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é‡‘æ¹–å¿é“¶é›†ç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,748,'32083106');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é‡‘æ¹–å¿æ¶‚æ²Ÿç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,748,'32083107');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é‡‘æ¹–å¿å‰é”‹ç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,748,'32083108');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é‡‘æ¹–å¿å•è‰¯ç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,748,'32083109');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é‡‘æ¹–å¿é‡‘åŒ—ç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,748,'32083110');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é‡‘æ¹–å¿ç²®é£Ÿå±€çŸ³æ¸¯ç²®åº“',0,1,10,71,748,'32083111');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ±Ÿè‹çœé™ˆæ¡¥ç²®é£Ÿå‚¨å¤‡ç›´å±åº“',0,1,10,71,748,'32083112');
 
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('½ğºşÏØÀè³ÇÁ¸ÓÍ¹ÜÀíËù','½ğºşÏØÀè³ÇÁ¸ÓÍ¹ÜÀíËù',0,1,10,71,748,'32083101',1);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('½ğºşÏØ´÷Â¥Á¸ÓÍ¹ÜÀíËù','½ğºşÏØ´÷Â¥Á¸ÓÍ¹ÜÀíËù',0,1,10,71,748,'32083102',2);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('½ğºşÏØ½ğÄÏÁ¸ÓÍ¹ÜÀíËù','½ğºşÏØ½ğÄÏÁ¸ÓÍ¹ÜÀíËù',0,1,10,71,748,'32083103',3);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('½ğºşÏØãÉÇÅÁ¸ÓÍ¹ÜÀíËù','½ğºşÏØãÉÇÅÁ¸ÓÍ¹ÜÀíËù',0,1,10,71,748,'32083104',4);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('½ğºşÏØËş¼¯Á¸ÓÍ¹ÜÀíËù','½ğºşÏØËş¼¯Á¸ÓÍ¹ÜÀíËù',0,1,10,71,748,'32083105',5);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('½ğºşÏØÒø¼¯Á¸ÓÍ¹ÜÀíËù','½ğºşÏØÒø¼¯Á¸ÓÍ¹ÜÀíËù',0,1,10,71,748,'32083106',6);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('½ğºşÏØÍ¿¹µÁ¸ÓÍ¹ÜÀíËù','½ğºşÏØÍ¿¹µÁ¸ÓÍ¹ÜÀíËù',0,1,10,71,748,'32083107',7);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('½ğºşÏØÇ°·æÁ¸ÓÍ¹ÜÀíËù','½ğºşÏØÇ°·æÁ¸ÓÍ¹ÜÀíËù',0,1,10,71,748,'32083108',8);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('½ğºşÏØÂÀÁ¼Á¸ÓÍ¹ÜÀíËù','½ğºşÏØÂÀÁ¼Á¸ÓÍ¹ÜÀíËù',0,1,10,71,748,'32083109',9);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('½ğºşÏØ½ğ±±Á¸ÓÍ¹ÜÀíËù','½ğºşÏØ½ğ±±Á¸ÓÍ¹ÜÀíËù',0,1,10,71,748,'32083110',10);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('½ğºşÏØÁ¸Ê³¾ÖÊ¯¸ÛÁ¸¿â','½ğºşÏØÁ¸Ê³¾ÖÊ¯¸ÛÁ¸¿â',0,1,10,71,748,'32083111',11);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('½­ËÕÊ¡³ÂÇÅÁ¸Ê³´¢±¸Ö±Êô¿â','½­ËÕÊ¡³ÂÇÅÁ¸Ê³´¢±¸Ö±Êô¿â',0,1,10,71,748,'32083112',12);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é‡‘æ¹–å¿é»åŸç²®æ²¹ç®¡ç†æ‰€','é‡‘æ¹–å¿é»åŸç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,748,'32083101',1);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é‡‘æ¹–å¿æˆ´æ¥¼ç²®æ²¹ç®¡ç†æ‰€','é‡‘æ¹–å¿æˆ´æ¥¼ç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,748,'32083102',2);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é‡‘æ¹–å¿é‡‘å—ç²®æ²¹ç®¡ç†æ‰€','é‡‘æ¹–å¿é‡‘å—ç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,748,'32083103',3);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é‡‘æ¹–å¿é—µæ¡¥ç²®æ²¹ç®¡ç†æ‰€','é‡‘æ¹–å¿é—µæ¡¥ç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,748,'32083104',4);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é‡‘æ¹–å¿å¡”é›†ç²®æ²¹ç®¡ç†æ‰€','é‡‘æ¹–å¿å¡”é›†ç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,748,'32083105',5);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é‡‘æ¹–å¿é“¶é›†ç²®æ²¹ç®¡ç†æ‰€','é‡‘æ¹–å¿é“¶é›†ç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,748,'32083106',6);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é‡‘æ¹–å¿æ¶‚æ²Ÿç²®æ²¹ç®¡ç†æ‰€','é‡‘æ¹–å¿æ¶‚æ²Ÿç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,748,'32083107',7);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é‡‘æ¹–å¿å‰é”‹ç²®æ²¹ç®¡ç†æ‰€','é‡‘æ¹–å¿å‰é”‹ç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,748,'32083108',8);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é‡‘æ¹–å¿å•è‰¯ç²®æ²¹ç®¡ç†æ‰€','é‡‘æ¹–å¿å•è‰¯ç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,748,'32083109',9);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é‡‘æ¹–å¿é‡‘åŒ—ç²®æ²¹ç®¡ç†æ‰€','é‡‘æ¹–å¿é‡‘åŒ—ç²®æ²¹ç®¡ç†æ‰€',0,1,10,71,748,'32083110',10);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é‡‘æ¹–å¿ç²®é£Ÿå±€çŸ³æ¸¯ç²®åº“','é‡‘æ¹–å¿ç²®é£Ÿå±€çŸ³æ¸¯ç²®åº“',0,1,10,71,748,'32083111',11);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ±Ÿè‹çœé™ˆæ¡¥ç²®é£Ÿå‚¨å¤‡ç›´å±åº“','æ±Ÿè‹çœé™ˆæ¡¥ç²®é£Ÿå‚¨å¤‡ç›´å±åº“',0,1,10,71,748,'32083112',12);
 
 select * from t_district t
-where t.disName='ÚüÖİÊĞ'
+where t.disName='é‚³å·å¸‚'
 10 70 740
 
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ÚüÖİÊĞĞÏÂ¥ÕòÁ¸Ê³¹ÜÀíËù',0,1,10,70,740,'32038201');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ÚüÖİÊĞËÄ»§ÕòÁ¸Ê³¹ÜÀíËù',0,1,10,70,740,'32038202');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ÚüÖİÊĞÁ¸Ê³´¢±¸Ö±Êô¿â',0,1,10,70,740,'32038203');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ÚüÖİÊĞÒéÌÃÕòÁ¸Ê³¹ÜÀíËù',0,1,10,70,740,'32038204');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ÚüÖİÊĞÕ¼³ÇµÚ¶şÁ¸¹ÜËù',0,1,10,70,740,'32038205');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ÚüÖİÊĞ°ËÂ·ÕòÁ¸Ê³¹ÜÀíËù',0,1,10,70,740,'32038206');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ÚüÖİÊĞĞÂºÓµÚ¶şÁ¸¹ÜËù',0,1,10,70,740,'32038207');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é‚³å·å¸‚é‚¢æ¥¼é•‡ç²®é£Ÿç®¡ç†æ‰€',0,1,10,70,740,'32038201');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é‚³å·å¸‚å››æˆ·é•‡ç²®é£Ÿç®¡ç†æ‰€',0,1,10,70,740,'32038202');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é‚³å·å¸‚ç²®é£Ÿå‚¨å¤‡ç›´å±åº“',0,1,10,70,740,'32038203');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é‚³å·å¸‚è®®å ‚é•‡ç²®é£Ÿç®¡ç†æ‰€',0,1,10,70,740,'32038204');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é‚³å·å¸‚å åŸç¬¬äºŒç²®ç®¡æ‰€',0,1,10,70,740,'32038205');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é‚³å·å¸‚å…«è·¯é•‡ç²®é£Ÿç®¡ç†æ‰€',0,1,10,70,740,'32038206');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é‚³å·å¸‚æ–°æ²³ç¬¬äºŒç²®ç®¡æ‰€',0,1,10,70,740,'32038207');
 
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ÚüÖİÊĞĞÏÂ¥ÕòÁ¸Ê³¹ÜÀíËù','ÚüÖİÊĞĞÏÂ¥ÕòÁ¸Ê³¹ÜÀíËù',0,1,10,70,740,'32038201',1);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ÚüÖİÊĞËÄ»§ÕòÁ¸Ê³¹ÜÀíËù','ÚüÖİÊĞËÄ»§ÕòÁ¸Ê³¹ÜÀíËù',0,1,10,70,740,'32038202',2);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ÚüÖİÊĞÁ¸Ê³´¢±¸Ö±Êô¿â','ÚüÖİÊĞÁ¸Ê³´¢±¸Ö±Êô¿â',0,1,10,70,740,'32038203',3);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ÚüÖİÊĞÒéÌÃÕòÁ¸Ê³¹ÜÀíËù','ÚüÖİÊĞÒéÌÃÕòÁ¸Ê³¹ÜÀíËù',0,1,10,70,740,'32038204',4);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ÚüÖİÊĞÕ¼³ÇµÚ¶şÁ¸¹ÜËù','ÚüÖİÊĞÕ¼³ÇµÚ¶şÁ¸¹ÜËù',0,1,10,70,740,'32038205',5);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ÚüÖİÊĞ°ËÂ·ÕòÁ¸Ê³¹ÜÀíËù','ÚüÖİÊĞ°ËÂ·ÕòÁ¸Ê³¹ÜÀíËù',0,1,10,70,740,'32038206',6);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ÚüÖİÊĞĞÂºÓµÚ¶şÁ¸¹ÜËù','ÚüÖİÊĞĞÂºÓµÚ¶şÁ¸¹ÜËù',0,1,10,70,740,'32038207',7);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é‚³å·å¸‚é‚¢æ¥¼é•‡ç²®é£Ÿç®¡ç†æ‰€','é‚³å·å¸‚é‚¢æ¥¼é•‡ç²®é£Ÿç®¡ç†æ‰€',0,1,10,70,740,'32038201',1);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é‚³å·å¸‚å››æˆ·é•‡ç²®é£Ÿç®¡ç†æ‰€','é‚³å·å¸‚å››æˆ·é•‡ç²®é£Ÿç®¡ç†æ‰€',0,1,10,70,740,'32038202',2);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é‚³å·å¸‚ç²®é£Ÿå‚¨å¤‡ç›´å±åº“','é‚³å·å¸‚ç²®é£Ÿå‚¨å¤‡ç›´å±åº“',0,1,10,70,740,'32038203',3);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é‚³å·å¸‚è®®å ‚é•‡ç²®é£Ÿç®¡ç†æ‰€','é‚³å·å¸‚è®®å ‚é•‡ç²®é£Ÿç®¡ç†æ‰€',0,1,10,70,740,'32038204',4);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é‚³å·å¸‚å åŸç¬¬äºŒç²®ç®¡æ‰€','é‚³å·å¸‚å åŸç¬¬äºŒç²®ç®¡æ‰€',0,1,10,70,740,'32038205',5);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é‚³å·å¸‚å…«è·¯é•‡ç²®é£Ÿç®¡ç†æ‰€','é‚³å·å¸‚å…«è·¯é•‡ç²®é£Ÿç®¡ç†æ‰€',0,1,10,70,740,'32038206',6);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é‚³å·å¸‚æ–°æ²³ç¬¬äºŒç²®ç®¡æ‰€','é‚³å·å¸‚æ–°æ²³ç¬¬äºŒç²®ç®¡æ‰€',0,1,10,70,740,'32038207',7);
 
-update yw_liangku set LNG=117.899502,LAT=34.266288 where lkname='ÚüÖİÊĞÒéÌÃÕòÁ¸Ê³¹ÜÀíËù';
-update yw_liangku set LNG=117.840308,LAT=34.576336 where lkname='ÚüÖİÊĞĞÏÂ¥ÕòÁ¸Ê³¹ÜÀíËù';
-update yw_liangku set LNG=117.801403,LAT=34.159377 where lkname='ÚüÖİÊĞÕ¼³ÇµÚ¶şÁ¸¹ÜËù';
-update yw_liangku set LNG=117.946855,LAT=34.635617 where lkname='ÚüÖİÊĞËÄ»§ÕòÁ¸Ê³¹ÜÀíËù';
-update yw_liangku set LNG=117.963776,LAT=34.246808 where lkname='ÚüÖİÊĞĞÂºÓµÚ¶şÁ¸¹ÜËù';
-update yw_liangku set LNG=117.862995,LAT=34.307921 where lkname='ÚüÖİÊĞÁ¸Ê³´¢±¸Ö±Êô¿â';
-update yw_liangku set LNG=117.939648,LAT=34.171305 where lkname='ÚüÖİÊĞ°ËÂ·ÕòÁ¸Ê³¹ÜÀíËù';
+update yw_liangku set LNG=117.899502,LAT=34.266288 where lkname='é‚³å·å¸‚è®®å ‚é•‡ç²®é£Ÿç®¡ç†æ‰€';
+update yw_liangku set LNG=117.840308,LAT=34.576336 where lkname='é‚³å·å¸‚é‚¢æ¥¼é•‡ç²®é£Ÿç®¡ç†æ‰€';
+update yw_liangku set LNG=117.801403,LAT=34.159377 where lkname='é‚³å·å¸‚å åŸç¬¬äºŒç²®ç®¡æ‰€';
+update yw_liangku set LNG=117.946855,LAT=34.635617 where lkname='é‚³å·å¸‚å››æˆ·é•‡ç²®é£Ÿç®¡ç†æ‰€';
+update yw_liangku set LNG=117.963776,LAT=34.246808 where lkname='é‚³å·å¸‚æ–°æ²³ç¬¬äºŒç²®ç®¡æ‰€';
+update yw_liangku set LNG=117.862995,LAT=34.307921 where lkname='é‚³å·å¸‚ç²®é£Ÿå‚¨å¤‡ç›´å±åº“';
+update yw_liangku set LNG=117.939648,LAT=34.171305 where lkname='é‚³å·å¸‚å…«è·¯é•‡ç²®é£Ÿç®¡ç†æ‰€';
 
-update L_GRAINDEPOT set LONGITUDE=117.899502,LATITUDE=34.266288 where GRAINDEPOTNAME='ÚüÖİÊĞÒéÌÃÕòÁ¸Ê³¹ÜÀíËù';
-update L_GRAINDEPOT set LONGITUDE=117.840308,LATITUDE=34.576336 where GRAINDEPOTNAME='ÚüÖİÊĞĞÏÂ¥ÕòÁ¸Ê³¹ÜÀíËù';
-update L_GRAINDEPOT set LONGITUDE=117.801403,LATITUDE=34.159377 where GRAINDEPOTNAME='ÚüÖİÊĞÕ¼³ÇµÚ¶şÁ¸¹ÜËù';
-update L_GRAINDEPOT set LONGITUDE=117.946855,LATITUDE=34.635617 where GRAINDEPOTNAME='ÚüÖİÊĞËÄ»§ÕòÁ¸Ê³¹ÜÀíËù';
-update L_GRAINDEPOT set LONGITUDE=117.963776,LATITUDE=34.246808 where GRAINDEPOTNAME='ÚüÖİÊĞĞÂºÓµÚ¶şÁ¸¹ÜËù';
-update L_GRAINDEPOT set LONGITUDE=117.862995,LATITUDE=34.307921 where GRAINDEPOTNAME='ÚüÖİÊĞÁ¸Ê³´¢±¸Ö±Êô¿â';
-update L_GRAINDEPOT set LONGITUDE=117.939648,LATITUDE=34.171305 where GRAINDEPOTNAME='ÚüÖİÊĞ°ËÂ·ÕòÁ¸Ê³¹ÜÀíËù';
+update L_GRAINDEPOT set LONGITUDE=117.899502,LATITUDE=34.266288 where GRAINDEPOTNAME='é‚³å·å¸‚è®®å ‚é•‡ç²®é£Ÿç®¡ç†æ‰€';
+update L_GRAINDEPOT set LONGITUDE=117.840308,LATITUDE=34.576336 where GRAINDEPOTNAME='é‚³å·å¸‚é‚¢æ¥¼é•‡ç²®é£Ÿç®¡ç†æ‰€';
+update L_GRAINDEPOT set LONGITUDE=117.801403,LATITUDE=34.159377 where GRAINDEPOTNAME='é‚³å·å¸‚å åŸç¬¬äºŒç²®ç®¡æ‰€';
+update L_GRAINDEPOT set LONGITUDE=117.946855,LATITUDE=34.635617 where GRAINDEPOTNAME='é‚³å·å¸‚å››æˆ·é•‡ç²®é£Ÿç®¡ç†æ‰€';
+update L_GRAINDEPOT set LONGITUDE=117.963776,LATITUDE=34.246808 where GRAINDEPOTNAME='é‚³å·å¸‚æ–°æ²³ç¬¬äºŒç²®ç®¡æ‰€';
+update L_GRAINDEPOT set LONGITUDE=117.862995,LATITUDE=34.307921 where GRAINDEPOTNAME='é‚³å·å¸‚ç²®é£Ÿå‚¨å¤‡ç›´å±åº“';
+update L_GRAINDEPOT set LONGITUDE=117.939648,LATITUDE=34.171305 where GRAINDEPOTNAME='é‚³å·å¸‚å…«è·¯é•‡ç²®é£Ÿç®¡ç†æ‰€';
 
-'Õò½­ÊĞ'
+'é•‡æ±Ÿå¸‚'
 10 65 
 
-insert into yw_liangku(lkname,flag,LEVELS,province,city,t_code) values('Õò½­¹ú¼ÒÁ¸Ê³´¢±¸¿â',0,1,10,65,'32110101');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('Õò½­µ¤Í½ÇøĞÒ¸£ÇÅÁ¸Ê³ÊÕ´¢ÖĞĞÄ',0,1,10,65,691,'32111201');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('¾äÈİÊĞÁ¸Ê³ÊÕ´¢ÖĞĞÄĞĞÏã¿â',0,1,10,65,694,'32118301');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,t_code) values('é•‡æ±Ÿå›½å®¶ç²®é£Ÿå‚¨å¤‡åº“',0,1,10,65,'32110101');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('é•‡æ±Ÿä¸¹å¾’åŒºå¹¸ç¦æ¡¥ç²®é£Ÿæ”¶å‚¨ä¸­å¿ƒ',0,1,10,65,691,'32111201');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('å¥å®¹å¸‚ç²®é£Ÿæ”¶å‚¨ä¸­å¿ƒè¡Œé¦™åº“',0,1,10,65,694,'32118301');
 
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,GRAINDEPOTCODE,GRAINDEPOTID) values('Õò½­¹ú¼ÒÁ¸Ê³´¢±¸¿â','Õò½­¹ú¼ÒÁ¸Ê³´¢±¸¿â',0,1,10,65,'32110101',1);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('Õò½­µ¤Í½ÇøĞÒ¸£ÇÅÁ¸Ê³ÊÕ´¢ÖĞĞÄ','Õò½­µ¤Í½ÇøĞÒ¸£ÇÅÁ¸Ê³ÊÕ´¢ÖĞĞÄ',0,1,10,65,691,'32111201',2);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('¾äÈİÊĞÁ¸Ê³ÊÕ´¢ÖĞĞÄĞĞÏã¿â','¾äÈİÊĞÁ¸Ê³ÊÕ´¢ÖĞĞÄĞĞÏã¿â',0,1,10,65,694,'32118301',3);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,GRAINDEPOTCODE,GRAINDEPOTID) values('é•‡æ±Ÿå›½å®¶ç²®é£Ÿå‚¨å¤‡åº“','é•‡æ±Ÿå›½å®¶ç²®é£Ÿå‚¨å¤‡åº“',0,1,10,65,'32110101',1);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('é•‡æ±Ÿä¸¹å¾’åŒºå¹¸ç¦æ¡¥ç²®é£Ÿæ”¶å‚¨ä¸­å¿ƒ','é•‡æ±Ÿä¸¹å¾’åŒºå¹¸ç¦æ¡¥ç²®é£Ÿæ”¶å‚¨ä¸­å¿ƒ',0,1,10,65,691,'32111201',2);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('å¥å®¹å¸‚ç²®é£Ÿæ”¶å‚¨ä¸­å¿ƒè¡Œé¦™åº“','å¥å®¹å¸‚ç²®é£Ÿæ”¶å‚¨ä¸­å¿ƒè¡Œé¦™åº“',0,1,10,65,694,'32118301',3);
 
 select * from t_district t
-where t.disName='ËŞÔ¥Çø'
+where t.disName='å®¿è±«åŒº'
 10 75 770
 
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ËŞÇ¨ÊĞËŞÔ¥ÇøÀ´ÁúÁ¸¿â',0,1,10,75,770,'32131101');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ËŞÇ¨ÊĞËŞÔ¥Çø¹ØÃíÁ¸Ê³´¢ÏúÓĞÏŞ¹«Ë¾',0,1,10,75,770,'32131102');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ËŞÇ¨ÊĞËŞÔ¥Çø»Æ¶ÕÁ¸Ê³´¢ÏúÓĞÏŞ¹«Ë¾',0,1,10,75,770,'32131103');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ËŞÇ¨ÊĞËŞÔ¥ÇøÊÌÁëÁ¸Ê³´¢ÏúÓĞÏŞ¹«Ë¾',0,1,10,75,770,'32131104');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ËŞÇ¨ÊĞËŞÔ¥Çø¶¡×ìÁ¸Ê³´¢ÏúÓĞÏŞ¹«Ë¾',0,1,10,75,770,'32131105');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ËŞÇ¨ÊĞËŞÔ¥ÇøÂ½¼¯Á¸Ê³´¢ÏúÓĞÏŞ¹«Ë¾',0,1,10,75,770,'32131106');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ËŞÇ¨ÊĞËŞÔ¥ÇøÁ¸Ê³¹ºÏú¹«Ë¾´óĞË´¢±¸¿â',0,1,10,75,770,'32131107');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ËŞÇ¨ÊĞËŞÔ¥ÇøÁ¸Ê³¹ºÏú¹«Ë¾±£°²´¢±¸¿â',0,1,10,75,770,'32131108');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('å®¿è¿å¸‚å®¿è±«åŒºæ¥é¾™ç²®åº“',0,1,10,75,770,'32131101');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('å®¿è¿å¸‚å®¿è±«åŒºå…³åº™ç²®é£Ÿå‚¨é”€æœ‰é™å…¬å¸',0,1,10,75,770,'32131102');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('å®¿è¿å¸‚å®¿è±«åŒºé»„å¢©ç²®é£Ÿå‚¨é”€æœ‰é™å…¬å¸',0,1,10,75,770,'32131103');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('å®¿è¿å¸‚å®¿è±«åŒºä¾å²­ç²®é£Ÿå‚¨é”€æœ‰é™å…¬å¸',0,1,10,75,770,'32131104');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('å®¿è¿å¸‚å®¿è±«åŒºä¸å˜´ç²®é£Ÿå‚¨é”€æœ‰é™å…¬å¸',0,1,10,75,770,'32131105');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('å®¿è¿å¸‚å®¿è±«åŒºé™†é›†ç²®é£Ÿå‚¨é”€æœ‰é™å…¬å¸',0,1,10,75,770,'32131106');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('å®¿è¿å¸‚å®¿è±«åŒºç²®é£Ÿè´­é”€å…¬å¸å¤§å…´å‚¨å¤‡åº“',0,1,10,75,770,'32131107');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('å®¿è¿å¸‚å®¿è±«åŒºç²®é£Ÿè´­é”€å…¬å¸ä¿å®‰å‚¨å¤‡åº“',0,1,10,75,770,'32131108');
 
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ËŞÇ¨ÊĞËŞÔ¥ÇøÀ´ÁúÁ¸¿â','ËŞÇ¨ÊĞËŞÔ¥ÇøÀ´ÁúÁ¸¿â',0,1,10,75,770,'32131101',1);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ËŞÇ¨ÊĞËŞÔ¥Çø¹ØÃíÁ¸Ê³´¢ÏúÓĞÏŞ¹«Ë¾','ËŞÇ¨ÊĞËŞÔ¥Çø¹ØÃíÁ¸Ê³´¢ÏúÓĞÏŞ¹«Ë¾',0,1,10,75,770,'32131102',2);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ËŞÇ¨ÊĞËŞÔ¥Çø»Æ¶ÕÁ¸Ê³´¢ÏúÓĞÏŞ¹«Ë¾','ËŞÇ¨ÊĞËŞÔ¥Çø»Æ¶ÕÁ¸Ê³´¢ÏúÓĞÏŞ¹«Ë¾',0,1,10,75,770,'32131103',3);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ËŞÇ¨ÊĞËŞÔ¥ÇøÊÌÁëÁ¸Ê³´¢ÏúÓĞÏŞ¹«Ë¾','ËŞÇ¨ÊĞËŞÔ¥ÇøÊÌÁëÁ¸Ê³´¢ÏúÓĞÏŞ¹«Ë¾',0,1,10,75,770,'32131104',4);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ËŞÇ¨ÊĞËŞÔ¥Çø¶¡×ìÁ¸Ê³´¢ÏúÓĞÏŞ¹«Ë¾','ËŞÇ¨ÊĞËŞÔ¥Çø¶¡×ìÁ¸Ê³´¢ÏúÓĞÏŞ¹«Ë¾',0,1,10,75,770,'32131105',5);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ËŞÇ¨ÊĞËŞÔ¥ÇøÂ½¼¯Á¸Ê³´¢ÏúÓĞÏŞ¹«Ë¾','ËŞÇ¨ÊĞËŞÔ¥ÇøÂ½¼¯Á¸Ê³´¢ÏúÓĞÏŞ¹«Ë¾',0,1,10,75,770,'32131106',6);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ËŞÇ¨ÊĞËŞÔ¥ÇøÁ¸Ê³¹ºÏú¹«Ë¾´óĞË´¢±¸¿â','ËŞÇ¨ÊĞËŞÔ¥ÇøÁ¸Ê³¹ºÏú¹«Ë¾´óĞË´¢±¸¿â',0,1,10,75,770,'32131107',7);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ËŞÇ¨ÊĞËŞÔ¥ÇøÁ¸Ê³¹ºÏú¹«Ë¾±£°²´¢±¸¿â','ËŞÇ¨ÊĞËŞÔ¥ÇøÁ¸Ê³¹ºÏú¹«Ë¾±£°²´¢±¸¿â',0,1,10,75,770,'32131108',8);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('å®¿è¿å¸‚å®¿è±«åŒºæ¥é¾™ç²®åº“','å®¿è¿å¸‚å®¿è±«åŒºæ¥é¾™ç²®åº“',0,1,10,75,770,'32131101',1);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('å®¿è¿å¸‚å®¿è±«åŒºå…³åº™ç²®é£Ÿå‚¨é”€æœ‰é™å…¬å¸','å®¿è¿å¸‚å®¿è±«åŒºå…³åº™ç²®é£Ÿå‚¨é”€æœ‰é™å…¬å¸',0,1,10,75,770,'32131102',2);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('å®¿è¿å¸‚å®¿è±«åŒºé»„å¢©ç²®é£Ÿå‚¨é”€æœ‰é™å…¬å¸','å®¿è¿å¸‚å®¿è±«åŒºé»„å¢©ç²®é£Ÿå‚¨é”€æœ‰é™å…¬å¸',0,1,10,75,770,'32131103',3);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('å®¿è¿å¸‚å®¿è±«åŒºä¾å²­ç²®é£Ÿå‚¨é”€æœ‰é™å…¬å¸','å®¿è¿å¸‚å®¿è±«åŒºä¾å²­ç²®é£Ÿå‚¨é”€æœ‰é™å…¬å¸',0,1,10,75,770,'32131104',4);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('å®¿è¿å¸‚å®¿è±«åŒºä¸å˜´ç²®é£Ÿå‚¨é”€æœ‰é™å…¬å¸','å®¿è¿å¸‚å®¿è±«åŒºä¸å˜´ç²®é£Ÿå‚¨é”€æœ‰é™å…¬å¸',0,1,10,75,770,'32131105',5);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('å®¿è¿å¸‚å®¿è±«åŒºé™†é›†ç²®é£Ÿå‚¨é”€æœ‰é™å…¬å¸','å®¿è¿å¸‚å®¿è±«åŒºé™†é›†ç²®é£Ÿå‚¨é”€æœ‰é™å…¬å¸',0,1,10,75,770,'32131106',6);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('å®¿è¿å¸‚å®¿è±«åŒºç²®é£Ÿè´­é”€å…¬å¸å¤§å…´å‚¨å¤‡åº“','å®¿è¿å¸‚å®¿è±«åŒºç²®é£Ÿè´­é”€å…¬å¸å¤§å…´å‚¨å¤‡åº“',0,1,10,75,770,'32131107',7);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('å®¿è¿å¸‚å®¿è±«åŒºç²®é£Ÿè´­é”€å…¬å¸ä¿å®‰å‚¨å¤‡åº“','å®¿è¿å¸‚å®¿è±«åŒºç²®é£Ÿè´­é”€å…¬å¸ä¿å®‰å‚¨å¤‡åº“',0,1,10,75,770,'32131108',8);
 
 select * from t_district t
-where t.disName like 'Úõ½­%'
+where t.disName like 'é‚—æ±Ÿ%'
 10 68 716
 
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ÑïÖİÚõ½­·½ÏïÁ¸¿â»ÆçåÁ¸Õ¾',0,1,10,68,716,'32100301');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ÑïÖİÚõ½­ÑîÊÙÁ¸Õ¾',0,1,10,68,716,'32100302');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ÑïÖİÚõ½­¹ÏÖİÁ¸¿â°ËÀïÁ¸Õ¾',0,1,10,68,716,'32100303');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ÑïÖİÚõ½­ãâºÓÁ¸¿â',0,1,10,68,716,'32100304');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ÑïÖİÚõ½­»±ãôÁ¸¿â¾ÆµéÁ¸Õ¾',0,1,10,68,716,'32100305');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ÑïÖİÚõ½­ÑîÃíÁ¸Õ¾',0,1,10,68,716,'32100306');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ÑïÖİÚõ½­¹ÏÖİÁ¸¿â',0,1,10,68,716,'32100307');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ‰¬å·é‚—æ±Ÿæ–¹å··ç²®åº“é»„çç²®ç«™',0,1,10,68,716,'32100301');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ‰¬å·é‚—æ±Ÿæ¨å¯¿ç²®ç«™',0,1,10,68,716,'32100302');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ‰¬å·é‚—æ±Ÿç“œå·ç²®åº“å…«é‡Œç²®ç«™',0,1,10,68,716,'32100303');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ‰¬å·é‚—æ±Ÿæ±Šæ²³ç²®åº“',0,1,10,68,716,'32100304');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ‰¬å·é‚—æ±Ÿæ§æ³—ç²®åº“é…’ç”¸ç²®ç«™',0,1,10,68,716,'32100305');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ‰¬å·é‚—æ±Ÿæ¨åº™ç²®ç«™',0,1,10,68,716,'32100306');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('æ‰¬å·é‚—æ±Ÿç“œå·ç²®åº“',0,1,10,68,716,'32100307');
 
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ÑïÖİÚõ½­·½ÏïÁ¸¿â»ÆçåÁ¸Õ¾','ÑïÖİÚõ½­·½ÏïÁ¸¿â»ÆçåÁ¸Õ¾',0,1,10,68,716,'32100301',1);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ÑïÖİÚõ½­ÑîÊÙÁ¸Õ¾','ÑïÖİÚõ½­ÑîÊÙÁ¸Õ¾',0,1,10,68,716,'32100302',2);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ÑïÖİÚõ½­¹ÏÖİÁ¸¿â°ËÀïÁ¸Õ¾','ÑïÖİÚõ½­¹ÏÖİÁ¸¿â°ËÀïÁ¸Õ¾',0,1,10,68,716,'32100303',3);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ÑïÖİÚõ½­ãâºÓÁ¸¿â','ÑïÖİÚõ½­ãâºÓÁ¸¿â',0,1,10,68,716,'32100304',4);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ÑïÖİÚõ½­»±ãôÁ¸¿â¾ÆµéÁ¸Õ¾','ÑïÖİÚõ½­»±ãôÁ¸¿â¾ÆµéÁ¸Õ¾',0,1,10,68,716,'32100305',5);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ÑïÖİÚõ½­ÑîÃíÁ¸Õ¾','ÑïÖİÚõ½­ÑîÃíÁ¸Õ¾',0,1,10,68,716,'32100306',6);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ÑïÖİÚõ½­¹ÏÖİÁ¸¿â','ÑïÖİÚõ½­¹ÏÖİÁ¸¿â',0,1,10,68,716,'32100307',7);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ‰¬å·é‚—æ±Ÿæ–¹å··ç²®åº“é»„çç²®ç«™','æ‰¬å·é‚—æ±Ÿæ–¹å··ç²®åº“é»„çç²®ç«™',0,1,10,68,716,'32100301',1);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ‰¬å·é‚—æ±Ÿæ¨å¯¿ç²®ç«™','æ‰¬å·é‚—æ±Ÿæ¨å¯¿ç²®ç«™',0,1,10,68,716,'32100302',2);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ‰¬å·é‚—æ±Ÿç“œå·ç²®åº“å…«é‡Œç²®ç«™','æ‰¬å·é‚—æ±Ÿç“œå·ç²®åº“å…«é‡Œç²®ç«™',0,1,10,68,716,'32100303',3);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ‰¬å·é‚—æ±Ÿæ±Šæ²³ç²®åº“','æ‰¬å·é‚—æ±Ÿæ±Šæ²³ç²®åº“',0,1,10,68,716,'32100304',4);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ‰¬å·é‚—æ±Ÿæ§æ³—ç²®åº“é…’ç”¸ç²®ç«™','æ‰¬å·é‚—æ±Ÿæ§æ³—ç²®åº“é…’ç”¸ç²®ç«™',0,1,10,68,716,'32100305',5);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ‰¬å·é‚—æ±Ÿæ¨åº™ç²®ç«™','æ‰¬å·é‚—æ±Ÿæ¨åº™ç²®ç«™',0,1,10,68,716,'32100306',6);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('æ‰¬å·é‚—æ±Ÿç“œå·ç²®åº“','æ‰¬å·é‚—æ±Ÿç“œå·ç²®åº“',0,1,10,68,716,'32100307',7);
 
 select * from t_district t
-where t.disName like '¼ÖÍô%'
+where t.disName like 'è´¾æ±ª%'
 70,733
 
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ĞìÖİÊĞ¼ÖÍôÇø´óÎâÕòÁ¸ÓÍ¹ÜÀíËù',0,1,10,70,733,'32030501');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ĞìÖİÊĞ¼ÖÍôÇø¼ÖÍôÕò´óÈªÁ¸ÓÍ¹ÜÀíËù£¨ãêÌÁÁ¸¿â£©',0,1,10,70,733,'32030502');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ĞìÖİÊĞ¼ÖÍôÁ¸Ê³´¢±¸¿â',0,1,10,70,733,'32030503');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ĞìÖİÊĞ¼ÖÍôÇøÇàÉ½ÈªÕòÁ¸ÓÍ¹ÜÀíËù',0,1,10,70,733,'32030504');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ĞìÖİÊĞ¼ÖÍôÇøËşÉ½ÖĞĞÄÁ¸¿â',0,1,10,70,733,'32030505');
-insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('ĞìÖİÊĞ¼ÖÍôÇø×Ï×¯ÕòÁ¸ÓÍ¹ÜÀíËù',0,1,10,70,733,'32030506');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('å¾å·å¸‚è´¾æ±ªåŒºå¤§å´é•‡ç²®æ²¹ç®¡ç†æ‰€',0,1,10,70,733,'32030501');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('å¾å·å¸‚è´¾æ±ªåŒºè´¾æ±ªé•‡å¤§æ³‰ç²®æ²¹ç®¡ç†æ‰€ï¼ˆæ±´å¡˜ç²®åº“ï¼‰',0,1,10,70,733,'32030502');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('å¾å·å¸‚è´¾æ±ªç²®é£Ÿå‚¨å¤‡åº“',0,1,10,70,733,'32030503');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('å¾å·å¸‚è´¾æ±ªåŒºé’å±±æ³‰é•‡ç²®æ²¹ç®¡ç†æ‰€',0,1,10,70,733,'32030504');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('å¾å·å¸‚è´¾æ±ªåŒºå¡”å±±ä¸­å¿ƒç²®åº“',0,1,10,70,733,'32030505');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('å¾å·å¸‚è´¾æ±ªåŒºç´«åº„é•‡ç²®æ²¹ç®¡ç†æ‰€',0,1,10,70,733,'32030506');
 
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ĞìÖİÊĞ¼ÖÍôÇø´óÎâÕòÁ¸ÓÍ¹ÜÀíËù','ĞìÖİÊĞ¼ÖÍôÇø´óÎâÕòÁ¸ÓÍ¹ÜÀíËù',0,1,10,70,733,'32030501',1);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ĞìÖİÊĞ¼ÖÍôÇø¼ÖÍôÕò´óÈªÁ¸ÓÍ¹ÜÀíËù£¨ãêÌÁÁ¸¿â£©','ĞìÖİÊĞ¼ÖÍôÇø¼ÖÍôÕò´óÈªÁ¸ÓÍ¹ÜÀíËù£¨ãêÌÁÁ¸¿â£©',0,1,10,70,733,'32030502',2);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ĞìÖİÊĞ¼ÖÍôÁ¸Ê³´¢±¸¿â','ĞìÖİÊĞ¼ÖÍôÁ¸Ê³´¢±¸¿â',0,1,10,70,733,'32030503',3);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ĞìÖİÊĞ¼ÖÍôÇøÇàÉ½ÈªÕòÁ¸ÓÍ¹ÜÀíËù','ĞìÖİÊĞ¼ÖÍôÇøÇàÉ½ÈªÕòÁ¸ÓÍ¹ÜÀíËù',0,1,10,70,733,'32030504',4);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ĞìÖİÊĞ¼ÖÍôÇøËşÉ½ÖĞĞÄÁ¸¿â','ĞìÖİÊĞ¼ÖÍôÇøËşÉ½ÖĞĞÄÁ¸¿â',0,1,10,70,733,'32030505',5);
-insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('ĞìÖİÊĞ¼ÖÍôÇø×Ï×¯ÕòÁ¸ÓÍ¹ÜÀíËù','ĞìÖİÊĞ¼ÖÍôÇø×Ï×¯ÕòÁ¸ÓÍ¹ÜÀíËù',0,1,10,70,733,'32030506',6);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('å¾å·å¸‚è´¾æ±ªåŒºå¤§å´é•‡ç²®æ²¹ç®¡ç†æ‰€','å¾å·å¸‚è´¾æ±ªåŒºå¤§å´é•‡ç²®æ²¹ç®¡ç†æ‰€',0,1,10,70,733,'32030501',1);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('å¾å·å¸‚è´¾æ±ªåŒºè´¾æ±ªé•‡å¤§æ³‰ç²®æ²¹ç®¡ç†æ‰€ï¼ˆæ±´å¡˜ç²®åº“ï¼‰','å¾å·å¸‚è´¾æ±ªåŒºè´¾æ±ªé•‡å¤§æ³‰ç²®æ²¹ç®¡ç†æ‰€ï¼ˆæ±´å¡˜ç²®åº“ï¼‰',0,1,10,70,733,'32030502',2);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('å¾å·å¸‚è´¾æ±ªç²®é£Ÿå‚¨å¤‡åº“','å¾å·å¸‚è´¾æ±ªç²®é£Ÿå‚¨å¤‡åº“',0,1,10,70,733,'32030503',3);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('å¾å·å¸‚è´¾æ±ªåŒºé’å±±æ³‰é•‡ç²®æ²¹ç®¡ç†æ‰€','å¾å·å¸‚è´¾æ±ªåŒºé’å±±æ³‰é•‡ç²®æ²¹ç®¡ç†æ‰€',0,1,10,70,733,'32030504',4);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('å¾å·å¸‚è´¾æ±ªåŒºå¡”å±±ä¸­å¿ƒç²®åº“','å¾å·å¸‚è´¾æ±ªåŒºå¡”å±±ä¸­å¿ƒç²®åº“',0,1,10,70,733,'32030505',5);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('å¾å·å¸‚è´¾æ±ªåŒºç´«åº„é•‡ç²®æ²¹ç®¡ç†æ‰€','å¾å·å¸‚è´¾æ±ªåŒºç´«åº„é•‡ç²®æ²¹ç®¡ç†æ‰€',0,1,10,70,733,'32030506',6);
