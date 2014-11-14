@@ -1,0 +1,70 @@
+JS/UIX is a virtual OS in UN*X-style for JavaScript and web-browsers.           
+                                                                                
+For help on specific topics type any of these commands:                         
+                                                                                
+info                        site information - about mass:werk                  
+features                    OS features / system info - about JS/UIX 0.49       
+man <command>               to display a manual entry for <command>             
+                                                                                
+Currently implemented UN*X-commands (see "man" for implemented options)         
+                                                                                
+ alias      set an alias                                                        
+ apropos    display a short description of a command                            
+ cal        display a monthly calendar (non-standard opt. "-w" for weeks-count) 
+ cat        concatenate files                                                   
+ chmod      change file permissions                                             
+ cd         change current working directory                                    
+ cp         copy files or directories                                           
+ date       display date and time (non-standard opt. "-u" for UTC)              
+ echo       write arguments back                                                
+ halt       halt system, shut down                                              
+ ls         list directory                                                      
+ logname    display login name
+ mkdir      make a directory                                                    
+ man        display manual page                                                 
+ more       pager                                                               
+ mv         move/rename files or directories                                    
+ pager      synonym for more                                                    
+ pg         synonym for more                                                    
+ pr         print (to a browser window)                                         
+ ps         display list of active processes                                    
+ pwd        print working directory                                             
+ reboot     reboot system                                                       
+ rm         remove file(s)                                                      
+ rmdir      remove a directory                                                  
+ set        set a variable                                                      
+ sh         start a new sub-shell                                               
+ stty       set terminal attributes                                             
+ su         switch user                                                         
+ touch      set the timestamp of file or create empty file                      
+ uname      display system name                                                 
+ unalias    discard an alias                                                    
+ unset      discard a variable                                                  
+ vi         visual editor (simple vi)                                           
+ view       vi in view mode                                                     
+ wc         word count
+ which      evaluate command path for command to be executed                    
+                                                                                
+Currently implemented non-standard commands                                     
+                                                                                
+ browse     open a new browser window with specified url (or site-homepage)     
+ clear      clear and reset the display                                         
+ features   display features of the virtual OS and the terminal                 
+ fexport    export/backup of home-directory for intersession operability.       
+ fimport    re-import of backuped home-data for intersession operability.       
+ hallo      display a short system-identification                               
+ hello      display a short system-identification                               
+ help       display this help table                                             
+ info       display site-information                                            
+ invaders   the "space invaders" arcade game for JS/UIX                         
+ js         javascript debugging                                                
+ mail       open a mail-client with specified address (default webmaster)       
+ news       displays latest news on system changes                              
+ reset      reboot system                                                       
+ splitmode  (on/off) - switch window splitting on|off                           
+ time       display system time ("-l" for local, "-u" for UTC)                  
+ type       echo with specified type-style (see man page)                       
+ web        synonym for "browse"                                                
+ write      write args with formating (marked up type-styles)
+ ------------------------------------------------------------------------------- 
+P.S.: Some data for testing can be found in "/var".
