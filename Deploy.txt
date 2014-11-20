@@ -365,3 +365,32 @@ insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid
 insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('徐州市贾汪区青山泉镇粮油管理所','徐州市贾汪区青山泉镇粮油管理所',0,1,10,70,733,'32030504',4);
 insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('徐州市贾汪区塔山中心粮库','徐州市贾汪区塔山中心粮库',0,1,10,70,733,'32030505',5);
 insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('徐州市贾汪区紫庄镇粮油管理所','徐州市贾汪区紫庄镇粮油管理所',0,1,10,70,733,'32030506',6);
+
+select * from t_district t
+where t.disName like '洪泽%'
+71,746
+
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code,LNG,LAT) values('洪泽县三河镇粮油管理所',0,1,10,71,746,'32082901',118.48357,33.073028);
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code,LNG,LAT) values('洪泽县东双沟镇粮油管理所',0,1,10,71,746,'32082902',118.51516,33.121175);
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code,LNG,LAT) values('洪泽县共和镇粮油管理所',0,1,10,71,746,'32082903',118.532038,33.061736);
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code,LNG,LAT) values('洪泽县黄集镇粮油管理所',0,1,10,71,746,'32082904',118.584782,33.212634);
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code,LNG,LAT) values('洪泽县万集镇粮油管理所',0,1,10,71,746,'32082905',118.554152,33.114302);
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code,LNG,LAT) values('洪泽县仁和镇粮食储备库',0,1,10,71,746,'32082906',118.585343,33.11981);
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code,LNG,LAT) values('洪泽县朱坝镇粮油管理所',0,1,10,71,746,'32082907',118.55338,33.163646);
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code,LNG,LAT) values('洪泽县高良涧镇粮油管理所',0,1,10,71,746,'32082908',118.52611,33.171461);
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code,LNG,LAT) values('洪泽县唐圩镇粮油管理所',0,1,10,71,746,'32082909',119.052826,33.163020);
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code,LNG,LAT) values('洪泽县老子山镇粮油管理所',0,1,10,71,746,'32082910',118.353864,33.112786);
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code,LNG,LAT) values('洪泽县蒋坝镇粮油管理所',0,1,10,71,746,'32082911',118.435112,33.062023);
+
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID,LONGITUDE,LATITUDE) values('洪泽县三河镇粮油管理所','洪泽县三河镇粮油管理所',0,1,10,71,746,'32082901',1,118.48357,33.073028);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID,LONGITUDE,LATITUDE) values('洪泽县东双沟镇粮油管理所','洪泽县东双沟镇粮油管理所',0,1,10,71,746,'32082902',2,118.51516,33.121175);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID,LONGITUDE,LATITUDE) values('洪泽县共和镇粮油管理所','洪泽县共和镇粮油管理所',0,1,10,71,746,'32082903',3,118.532038,33.061736);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID,LONGITUDE,LATITUDE) values('洪泽县黄集镇粮油管理所','洪泽县黄集镇粮油管理所',0,1,10,71,746,'32082904',4,118.584782,33.212634);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID,LONGITUDE,LATITUDE) values('洪泽县万集镇粮油管理所','洪泽县万集镇粮油管理所',0,1,10,71,746,'32082905',5,118.554152,33.114302);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID,LONGITUDE,LATITUDE) values('洪泽县仁和镇粮食储备库','洪泽县仁和镇粮食储备库',0,1,10,71,746,'32082906',6,118.585343,33.11981);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID,LONGITUDE,LATITUDE) values('洪泽县朱坝镇粮油管理所','洪泽县朱坝镇粮油管理所',0,1,10,71,746,'32082907',7,118.55338,33.163646);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID,LONGITUDE,LATITUDE) values('洪泽县高良涧镇粮油管理所','洪泽县高良涧镇粮油管理所',0,1,10,71,746,'32082908',8,118.52611,33.171461);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID,LONGITUDE,LATITUDE) values('洪泽县唐圩镇粮油管理所','洪泽县唐圩镇粮油管理所',0,1,10,71,746,'32082909',9,119.052826,33.163020);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID,LONGITUDE,LATITUDE) values('洪泽县老子山镇粮油管理所','洪泽县老子山镇粮油管理所',0,1,10,71,746,'32082910',10,118.353864,33.112786);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID,LONGITUDE,LATITUDE) values('洪泽县蒋坝镇粮油管理所','洪泽县蒋坝镇粮油管理所',0,1,10,71,746,'32082911',11,118.435112,33.062023);
+
