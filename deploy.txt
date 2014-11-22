@@ -1,0 +1,400 @@
+﻿1、安装jdk-6u31-windows-i586.exe；
+CLASSPATH
+.;%JAVA_HOME%/lib/dt.jar;%JAVA_HOME%/lib/tools.jar
+
+JAVA_HOME
+.;%JAVA_HOME%/lib/dt.jar;%JAVA_HOME%/lib/tools.jar
+Path
+%JAVA_HOME%/bin;
+
+2、安装apache-tomcat-6.0.36.exe；
+JNativeCpp.dll，EncryptUseKey.dll拷贝到tomcat安装目录下的bin目录下；
+-XX:PermSize=512M
+-XX:MaxPermSize=1024M
+
+3、安装Oracle，如果操作系统是64位需调整安装包，首先解压：
+（1）编辑安装包内文件  database/stage/prereq/db/refhost.xml 
+      增加下面节点
+      <OPERATING_SYSTEM>      
+          <VERSION VALUE="6.1"/>
+      </OPERATING_SYSTEM>     
+（2）编辑安装包内文件    database/install/oraparam.ini
+      找到[Certified Versions]小节 在下面的第二行中增加windows版本6.1，如下面所示
+      Windows=4.0,5.0,5.1,5.2,6.1 
+      注意要把windows 前面的"#"去掉，否则无效
+（3）其次我们必须关闭window7的 UAC。不要心存侥幸，这东西开着安装到一半就会被卡住，而且没有任何提示窗体。执行C:/Windows/System32/UserAccountControlSettings.exe 把旁边的控制块拉到最下面。
+（4）最后，要以兼容形式运行安装程序。右击setup.exe  点击属性-兼容性- 勾选以兼容模式运行这个程序 ，下拉列表中选择windos xp sp3
+	一切完成以后点击setup开始安装吧。
+
+4、创建数据库
+实例：qxpt
+用户名：szla
+密码：ictehi
+
+实例：grainup
+用户名：grainup
+密码：ictehi
+
+并赋权：
+create user szla identified by "ictehi";
+grant connect,resource,dba to szla;
+
+create user grainup identified by "ictehi";
+grant connect,resource,dba to grainup;
+
+5、导入数据库：
+（1）运行cmd
+（2）
+imp szla/ictehi@qxpt file=d:\Deploy\qxpt_20141028.dmp full=y ignore=y
+imp szla/ictehi@szla file=d:\Deploy\qxpt_20141028.dmp full=y ignore=y
+imp grainup/ictehi@grainup file=d:\Deploy\grainup_20141027.dmp full=y ignore=y
+（3）数据初始化：
+qxpt：
+delete from yw_cangku;
+delete from yw_cangkuinit;
+delete from yw_instorerecord;
+delete from yw_settlement;
+delete from yw_monivalue;
+delete from yw_graintemp;
+
+grainup：
+delete from BASIC_LOG;
+delete from B_ALLOT;
+delete from B_ALTERGA;
+delete from B_PROFITLOSS;
+delete from B_SAINOUT;
+delete from L_GRAIN;
+delete from L_GRAINATTR;
+delete from L_STORAGE;
+delete from m_Billflow;
+delete from m_Initstorage;
+delete from m_Onstorage;
+delete from l_graindepot;
+delete from yw_cangku;
+delete from yw_graintemp;
+delete from yw_liangku;
+delete from yw_monivalue;
+然后根据《客户关系一览表-母表.xlsx》初始化粮库表，记得数据库中的code以及t_code命名规则为客户代码去掉之前的“L”；
+
+6、解压《区县平台标准版安装包.zip》，《区县平台数据上报系统安装包.zip》，然后将其下面的文件夹部署tomcat webapps目录下，并注意修改配置文件中的数据库配置，这里不再累述。
+
+Tip:
+tomcat Automatic,PermSize
+grainup数据库M_USER需要修改RFID!!!
+sqlplus sys/ictehi@szla as sysdba
+sqlplus szla/ictehi@szla
+
+qxpt
+exp szla/ictehi@qxpt file=c:\qxpt_20141027.dmp
+szla
+exp szla/ictehi@szla file=c:\szla_20141027.dmp
+full=y
+exp grainup/ictehi@grainup file=c:\grainup_20141027.dmp
+
+单单导出导入grainup数据库中的user相关表
+exp grainup/ictehi@grainup file=d:\grainup_user.dmp tables=(M_USER,L_PROVINCE,L_CITY,L_COUNTY)
+imp grainup/ictehi@grainup file=d:\grainup_user.dmp full=y
+
+select * from t_province t
+where t.proName='江苏省'
+select * from t_city t
+where t.cityname='盐城市'
+select * from t_district t
+where t.disName='阜宁县'
+10 69 725
+
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('阜宁县丰墩粮库',0,1,10,69,725,'32092301');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('阜宁县陈集粮油管理所',0,1,10,69,725,'32092302');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('阜宁县陈良粮库',0,1,10,69,725,'32092303');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('阜宁县合利粮油管理所',0,1,10,69,725,'32092304');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('阜宁县硕集粮油管理所',0,1,10,69,725,'32092305');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('阜宁县角巷粮库',0,1,10,69,725,'32092306');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('阜宁县罗桥粮油管理所',0,1,10,69,725,'32092307');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('阜宁县公兴粮库',0,1,10,69,725,'32092308');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('阜宁县陈舍粮库',0,1,10,69,725,'32092309');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('阜宁县羊寨粮油管理所',0,1,10,69,725,'32092310');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('阜宁县芦蒲粮油管理所',0,1,10,69,725,'32092311');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('阜宁县凤谷粮库',0,1,10,69,725,'32092312');
+
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('阜宁县丰墩粮库','阜宁县丰墩粮库',0,1,10,69,725,'32092301',1);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('阜宁县陈集粮油管理所','阜宁县陈集粮油管理所',0,1,10,69,725,'32092302',2);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('阜宁县陈良粮库','阜宁县陈良粮库',0,1,10,69,725,'32092303',3);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('阜宁县合利粮油管理所','阜宁县合利粮油管理所',0,1,10,69,725,'32092304',4);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('阜宁县硕集粮油管理所','阜宁县硕集粮油管理所',0,1,10,69,725,'32092305',5);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('阜宁县角巷粮库','阜宁县角巷粮库',0,1,10,69,725,'32092306',6);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('阜宁县罗桥粮油管理所','阜宁县罗桥粮油管理所',0,1,10,69,725,'32092307',7);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('阜宁县公兴粮库','阜宁县公兴粮库',0,1,10,69,725,'32092308',8);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('阜宁县陈舍粮库','阜宁县陈舍粮库',0,1,10,69,725,'32092309',9);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('阜宁县羊寨粮油管理所','阜宁县羊寨粮油管理所',0,1,10,69,725,'32092310',10);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('阜宁县芦蒲粮油管理所','阜宁县芦蒲粮油管理所',0,1,10,69,725,'32092311',11);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('阜宁县凤谷粮库','阜宁县凤谷粮库',0,1,10,69,725,'32092312',12);
+
+select * from t_city t
+where t.cityname='宿迁市'
+select * from t_district t
+where t.disName='泗阳县'
+10 75 772
+
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('泗阳县军粮供应站',0,1,10,75,772,'32132301');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('泗阳县粮食购销总公司爱园粮库',0,1,10,75,772,'32132302');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('泗阳县卢集粮食储销有限公司',0,1,10,75,772,'32132303');
+
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('泗阳县军粮供应站','泗阳县军粮供应站',0,1,10,75,772,'32132301',1);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('泗阳县粮食购销总公司爱园粮库','泗阳县粮食购销总公司爱园粮库',0,1,10,75,772,'32132302',2);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('泗阳县卢集粮食储销有限公司','泗阳县卢集粮食储销有限公司',0,1,10,75,772,'32132303',3);
+
+select * from t_city t
+where t.cityname='淮安市'
+select * from t_district t
+where t.disName='涟水县'
+10 71 745
+
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县岔庙粮油管理所',0,1,10,71,745,'32082601');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县徐集粮管所',0,1,10,71,745,'32082602');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县南集粮管所',0,1,10,71,745,'32082603');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县黄营粮管所',0,1,10,71,745,'32082604');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县南禄粮管所',0,1,10,71,745,'32082605');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县方渡粮管所',0,1,10,71,745,'32082606');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县保滩粮管所',0,1,10,71,745,'32082607');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县小李集粮食油料管理所',0,1,10,71,745,'32082608');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县时码粮管所',0,1,10,71,745,'32082609');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县大东粮管所',0,1,10,71,745,'32082610');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县东胡集粮管所',0,1,10,71,745,'32082611');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县浅集粮管所',0,1,10,71,745,'32082612');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县灰墩粮管所',0,1,10,71,745,'32082613');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县义兴粮油管理所',0,1,10,71,745,'32082614');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县杨口粮管所',0,1,10,71,745,'32082615');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县陈师粮管所',0,1,10,71,745,'32082616');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县前进粮管所',0,1,10,71,745,'32082617');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县麻剁粮管所',0,1,10,71,745,'32082618');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县余圩粮管所',0,1,10,71,745,'32082619');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('江苏涟水国家粮食储备库',0,1,10,71,745,'32082620');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县旗杆粮库',0,1,10,71,745,'32082621');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县北集粮管所',0,1,10,71,745,'32082622');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县牌坊粮管所',0,1,10,71,745,'32082623');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县河网粮管所',0,1,10,71,745,'32082624');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县红窑粮管所',0,1,10,71,745,'32082625');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县蒋庵粮管所',0,1,10,71,745,'32082626');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县成集粮管所',0,1,10,71,745,'32082627');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('涟水县石湖粮管所',0,1,10,71,745,'32082628');
+
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县岔庙粮油管理所','涟水县岔庙粮油管理所',0,1,10,71,745,'32082601',1);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县徐集粮管所','涟水县徐集粮管所',0,1,10,71,745,'32082602',2);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县南集粮管所','涟水县南集粮管所',0,1,10,71,745,'32082603',3);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县黄营粮管所','涟水县黄营粮管所',0,1,10,71,745,'32082604',4);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县南禄粮管所','涟水县南禄粮管所',0,1,10,71,745,'32082605',5);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县方渡粮管所','涟水县方渡粮管所',0,1,10,71,745,'32082606',6);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县保滩粮管所','涟水县保滩粮管所',0,1,10,71,745,'32082607',7);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县小李集粮食油料管理所','涟水县小李集粮食油料管理所',0,1,10,71,745,'32082608',8);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县时码粮管所','涟水县时码粮管所',0,1,10,71,745,'32082609',9);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县大东粮管所','涟水县大东粮管所',0,1,10,71,745,'32082610',10);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县东胡集粮管所','涟水县东胡集粮管所',0,1,10,71,745,'32082611',11);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县浅集粮管所','涟水县浅集粮管所',0,1,10,71,745,'32082612',12);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县灰墩粮管所','涟水县灰墩粮管所',0,1,10,71,745,'32082613',13);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县义兴粮油管理所','涟水县义兴粮油管理所',0,1,10,71,745,'32082614',14);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县杨口粮管所','涟水县杨口粮管所',0,1,10,71,745,'32082615',15);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县陈师粮管所','涟水县陈师粮管所',0,1,10,71,745,'32082616',16);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县前进粮管所','涟水县前进粮管所',0,1,10,71,745,'32082617',17);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县麻剁粮管所','涟水县麻剁粮管所',0,1,10,71,745,'32082618',18);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县余圩粮管所','涟水县余圩粮管所',0,1,10,71,745,'32082619',19);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('江苏涟水国家粮食储备库','江苏涟水国家粮食储备库',0,1,10,71,745,'32082620',20);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县旗杆粮库','涟水县旗杆粮库',0,1,10,71,745,'32082621',21);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县北集粮管所','涟水县北集粮管所',0,1,10,71,745,'32082622',22);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县牌坊粮管所','涟水县牌坊粮管所',0,1,10,71,745,'32082623',23);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县河网粮管所','涟水县河网粮管所',0,1,10,71,745,'32082624',24);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县红窑粮管所','涟水县红窑粮管所',0,1,10,71,745,'32082625',25);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县蒋庵粮管所','涟水县蒋庵粮管所',0,1,10,71,745,'32082626',26);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县成集粮管所','涟水县成集粮管所',0,1,10,71,745,'32082627',27);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('涟水县石湖粮管所','涟水县石湖粮管所',0,1,10,71,745,'32082628',28);
+
+select * from t_city t
+where t.cityname='扬州市'
+select * from t_district t
+where t.disName='高邮市'
+10 68 714
+
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('甸垛粮油经营公司',0,1,10,68,714,'32108401');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('临泽粮油经营公司',0,1,10,68,714,'32108402');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('菱塘粮油经营公司',0,1,10,68,714,'32108403');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('甸垛粮油经营公司沙堰收储库',0,1,10,68,714,'32108404');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('甘垛粮油经营公司',0,1,10,68,714,'32108405');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('天山收储库',0,1,10,68,714,'32108406');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('八桥粮油经营公司',0,1,10,68,714,'32108407');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('汉留国家粮食储备',0,1,10,68,714,'32108408');
+
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('甸垛粮油经营公司','甸垛粮油经营公司',0,1,10,68,714,'32108401',1);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('临泽粮油经营公司','临泽粮油经营公司',0,1,10,68,714,'32108402',2);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('菱塘粮油经营公司','菱塘粮油经营公司',0,1,10,68,714,'32108403',3);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('甸垛粮油经营公司沙堰收储库','甸垛粮油经营公司沙堰收储库',0,1,10,68,714,'32108404',4);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('甘垛粮油经营公司','甘垛粮油经营公司',0,1,10,68,714,'32108405',5);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('天山收储库','天山收储库',0,1,10,68,714,'32108406',6);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('八桥粮油经营公司','八桥粮油经营公司',0,1,10,68,714,'32108407',7);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('汉留国家粮食储备','汉留国家粮食储备',0,1,10,68,714,'32108408',8);
+
+select * from t_city t
+where t.cityname='淮安市'
+select * from t_district t
+where t.disName='金湖县'
+10 71 748
+
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('金湖县黎城粮油管理所',0,1,10,71,748,'32083101');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('金湖县戴楼粮油管理所',0,1,10,71,748,'32083102');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('金湖县金南粮油管理所',0,1,10,71,748,'32083103');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('金湖县闵桥粮油管理所',0,1,10,71,748,'32083104');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('金湖县塔集粮油管理所',0,1,10,71,748,'32083105');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('金湖县银集粮油管理所',0,1,10,71,748,'32083106');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('金湖县涂沟粮油管理所',0,1,10,71,748,'32083107');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('金湖县前锋粮油管理所',0,1,10,71,748,'32083108');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('金湖县吕良粮油管理所',0,1,10,71,748,'32083109');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('金湖县金北粮油管理所',0,1,10,71,748,'32083110');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('金湖县粮食局石港粮库',0,1,10,71,748,'32083111');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('江苏省陈桥粮食储备直属库',0,1,10,71,748,'32083112');
+
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('金湖县黎城粮油管理所','金湖县黎城粮油管理所',0,1,10,71,748,'32083101',1);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('金湖县戴楼粮油管理所','金湖县戴楼粮油管理所',0,1,10,71,748,'32083102',2);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('金湖县金南粮油管理所','金湖县金南粮油管理所',0,1,10,71,748,'32083103',3);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('金湖县闵桥粮油管理所','金湖县闵桥粮油管理所',0,1,10,71,748,'32083104',4);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('金湖县塔集粮油管理所','金湖县塔集粮油管理所',0,1,10,71,748,'32083105',5);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('金湖县银集粮油管理所','金湖县银集粮油管理所',0,1,10,71,748,'32083106',6);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('金湖县涂沟粮油管理所','金湖县涂沟粮油管理所',0,1,10,71,748,'32083107',7);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('金湖县前锋粮油管理所','金湖县前锋粮油管理所',0,1,10,71,748,'32083108',8);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('金湖县吕良粮油管理所','金湖县吕良粮油管理所',0,1,10,71,748,'32083109',9);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('金湖县金北粮油管理所','金湖县金北粮油管理所',0,1,10,71,748,'32083110',10);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('金湖县粮食局石港粮库','金湖县粮食局石港粮库',0,1,10,71,748,'32083111',11);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('江苏省陈桥粮食储备直属库','江苏省陈桥粮食储备直属库',0,1,10,71,748,'32083112',12);
+
+select * from t_district t
+where t.disName='邳州市'
+10 70 740
+
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('邳州市邢楼镇粮食管理所',0,1,10,70,740,'32038201');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('邳州市四户镇粮食管理所',0,1,10,70,740,'32038202');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('邳州市粮食储备直属库',0,1,10,70,740,'32038203');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('邳州市议堂镇粮食管理所',0,1,10,70,740,'32038204');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('邳州市占城第二粮管所',0,1,10,70,740,'32038205');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('邳州市八路镇粮食管理所',0,1,10,70,740,'32038206');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('邳州市新河第二粮管所',0,1,10,70,740,'32038207');
+
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('邳州市邢楼镇粮食管理所','邳州市邢楼镇粮食管理所',0,1,10,70,740,'32038201',1);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('邳州市四户镇粮食管理所','邳州市四户镇粮食管理所',0,1,10,70,740,'32038202',2);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('邳州市粮食储备直属库','邳州市粮食储备直属库',0,1,10,70,740,'32038203',3);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('邳州市议堂镇粮食管理所','邳州市议堂镇粮食管理所',0,1,10,70,740,'32038204',4);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('邳州市占城第二粮管所','邳州市占城第二粮管所',0,1,10,70,740,'32038205',5);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('邳州市八路镇粮食管理所','邳州市八路镇粮食管理所',0,1,10,70,740,'32038206',6);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('邳州市新河第二粮管所','邳州市新河第二粮管所',0,1,10,70,740,'32038207',7);
+
+update yw_liangku set LNG=117.899502,LAT=34.266288 where lkname='邳州市议堂镇粮食管理所';
+update yw_liangku set LNG=117.840308,LAT=34.576336 where lkname='邳州市邢楼镇粮食管理所';
+update yw_liangku set LNG=117.801403,LAT=34.159377 where lkname='邳州市占城第二粮管所';
+update yw_liangku set LNG=117.946855,LAT=34.635617 where lkname='邳州市四户镇粮食管理所';
+update yw_liangku set LNG=117.963776,LAT=34.246808 where lkname='邳州市新河第二粮管所';
+update yw_liangku set LNG=117.862995,LAT=34.307921 where lkname='邳州市粮食储备直属库';
+update yw_liangku set LNG=117.939648,LAT=34.171305 where lkname='邳州市八路镇粮食管理所';
+
+update L_GRAINDEPOT set LONGITUDE=117.899502,LATITUDE=34.266288 where GRAINDEPOTNAME='邳州市议堂镇粮食管理所';
+update L_GRAINDEPOT set LONGITUDE=117.840308,LATITUDE=34.576336 where GRAINDEPOTNAME='邳州市邢楼镇粮食管理所';
+update L_GRAINDEPOT set LONGITUDE=117.801403,LATITUDE=34.159377 where GRAINDEPOTNAME='邳州市占城第二粮管所';
+update L_GRAINDEPOT set LONGITUDE=117.946855,LATITUDE=34.635617 where GRAINDEPOTNAME='邳州市四户镇粮食管理所';
+update L_GRAINDEPOT set LONGITUDE=117.963776,LATITUDE=34.246808 where GRAINDEPOTNAME='邳州市新河第二粮管所';
+update L_GRAINDEPOT set LONGITUDE=117.862995,LATITUDE=34.307921 where GRAINDEPOTNAME='邳州市粮食储备直属库';
+update L_GRAINDEPOT set LONGITUDE=117.939648,LATITUDE=34.171305 where GRAINDEPOTNAME='邳州市八路镇粮食管理所';
+
+'镇江市'
+10 65 
+
+insert into yw_liangku(lkname,flag,LEVELS,province,city,t_code) values('镇江国家粮食储备库',0,1,10,65,'32110101');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('镇江丹徒区幸福桥粮食收储中心',0,1,10,65,691,'32111201');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('句容市粮食收储中心行香库',0,1,10,65,694,'32118301');
+
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,GRAINDEPOTCODE,GRAINDEPOTID) values('镇江国家粮食储备库','镇江国家粮食储备库',0,1,10,65,'32110101',1);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('镇江丹徒区幸福桥粮食收储中心','镇江丹徒区幸福桥粮食收储中心',0,1,10,65,691,'32111201',2);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('句容市粮食收储中心行香库','句容市粮食收储中心行香库',0,1,10,65,694,'32118301',3);
+
+select * from t_district t
+where t.disName='宿豫区'
+10 75 770
+
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('宿迁市宿豫区来龙粮库',0,1,10,75,770,'32131101');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('宿迁市宿豫区关庙粮食储销有限公司',0,1,10,75,770,'32131102');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('宿迁市宿豫区黄墩粮食储销有限公司',0,1,10,75,770,'32131103');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('宿迁市宿豫区侍岭粮食储销有限公司',0,1,10,75,770,'32131104');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('宿迁市宿豫区丁嘴粮食储销有限公司',0,1,10,75,770,'32131105');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('宿迁市宿豫区陆集粮食储销有限公司',0,1,10,75,770,'32131106');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('宿迁市宿豫区粮食购销公司大兴储备库',0,1,10,75,770,'32131107');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('宿迁市宿豫区粮食购销公司保安储备库',0,1,10,75,770,'32131108');
+
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('宿迁市宿豫区来龙粮库','宿迁市宿豫区来龙粮库',0,1,10,75,770,'32131101',1);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('宿迁市宿豫区关庙粮食储销有限公司','宿迁市宿豫区关庙粮食储销有限公司',0,1,10,75,770,'32131102',2);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('宿迁市宿豫区黄墩粮食储销有限公司','宿迁市宿豫区黄墩粮食储销有限公司',0,1,10,75,770,'32131103',3);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('宿迁市宿豫区侍岭粮食储销有限公司','宿迁市宿豫区侍岭粮食储销有限公司',0,1,10,75,770,'32131104',4);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('宿迁市宿豫区丁嘴粮食储销有限公司','宿迁市宿豫区丁嘴粮食储销有限公司',0,1,10,75,770,'32131105',5);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('宿迁市宿豫区陆集粮食储销有限公司','宿迁市宿豫区陆集粮食储销有限公司',0,1,10,75,770,'32131106',6);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('宿迁市宿豫区粮食购销公司大兴储备库','宿迁市宿豫区粮食购销公司大兴储备库',0,1,10,75,770,'32131107',7);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('宿迁市宿豫区粮食购销公司保安储备库','宿迁市宿豫区粮食购销公司保安储备库',0,1,10,75,770,'32131108',8);
+
+select * from t_district t
+where t.disName like '邗江%'
+10 68 716
+
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('扬州邗江方巷粮库黄珏粮站',0,1,10,68,716,'32100301');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('扬州邗江杨寿粮站',0,1,10,68,716,'32100302');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('扬州邗江瓜州粮库八里粮站',0,1,10,68,716,'32100303');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('扬州邗江汊河粮库',0,1,10,68,716,'32100304');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('扬州邗江槐泗粮库酒甸粮站',0,1,10,68,716,'32100305');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('扬州邗江杨庙粮站',0,1,10,68,716,'32100306');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('扬州邗江瓜州粮库',0,1,10,68,716,'32100307');
+
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('扬州邗江方巷粮库黄珏粮站','扬州邗江方巷粮库黄珏粮站',0,1,10,68,716,'32100301',1);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('扬州邗江杨寿粮站','扬州邗江杨寿粮站',0,1,10,68,716,'32100302',2);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('扬州邗江瓜州粮库八里粮站','扬州邗江瓜州粮库八里粮站',0,1,10,68,716,'32100303',3);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('扬州邗江汊河粮库','扬州邗江汊河粮库',0,1,10,68,716,'32100304',4);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('扬州邗江槐泗粮库酒甸粮站','扬州邗江槐泗粮库酒甸粮站',0,1,10,68,716,'32100305',5);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('扬州邗江杨庙粮站','扬州邗江杨庙粮站',0,1,10,68,716,'32100306',6);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('扬州邗江瓜州粮库','扬州邗江瓜州粮库',0,1,10,68,716,'32100307',7);
+
+select * from t_district t
+where t.disName like '贾汪%'
+70,733
+
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('徐州市贾汪区大吴镇粮油管理所',0,1,10,70,733,'32030501');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('徐州市贾汪区贾汪镇大泉粮油管理所（汴塘粮库）',0,1,10,70,733,'32030502');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('徐州市贾汪粮食储备库',0,1,10,70,733,'32030503');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('徐州市贾汪区青山泉镇粮油管理所',0,1,10,70,733,'32030504');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('徐州市贾汪区塔山中心粮库',0,1,10,70,733,'32030505');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('徐州市贾汪区紫庄镇粮油管理所',0,1,10,70,733,'32030506');
+
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('徐州市贾汪区大吴镇粮油管理所','徐州市贾汪区大吴镇粮油管理所',0,1,10,70,733,'32030501',1);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('徐州市贾汪区贾汪镇大泉粮油管理所（汴塘粮库）','徐州市贾汪区贾汪镇大泉粮油管理所（汴塘粮库）',0,1,10,70,733,'32030502',2);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('徐州市贾汪粮食储备库','徐州市贾汪粮食储备库',0,1,10,70,733,'32030503',3);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('徐州市贾汪区青山泉镇粮油管理所','徐州市贾汪区青山泉镇粮油管理所',0,1,10,70,733,'32030504',4);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('徐州市贾汪区塔山中心粮库','徐州市贾汪区塔山中心粮库',0,1,10,70,733,'32030505',5);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('徐州市贾汪区紫庄镇粮油管理所','徐州市贾汪区紫庄镇粮油管理所',0,1,10,70,733,'32030506',6);
+
+select * from t_district t
+where t.disName like '洪泽%'
+71,746
+
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code,LNG,LAT) values('洪泽县三河镇粮油管理所',0,1,10,71,746,'32082901',118.48357,33.073028);
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code,LNG,LAT) values('洪泽县东双沟镇粮油管理所',0,1,10,71,746,'32082902',118.51516,33.121175);
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code,LNG,LAT) values('洪泽县共和镇粮油管理所',0,1,10,71,746,'32082903',118.532038,33.061736);
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code,LNG,LAT) values('洪泽县黄集镇粮油管理所',0,1,10,71,746,'32082904',118.584782,33.212634);
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code,LNG,LAT) values('洪泽县万集镇粮油管理所',0,1,10,71,746,'32082905',118.554152,33.114302);
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code,LNG,LAT) values('洪泽县仁和镇粮食储备库',0,1,10,71,746,'32082906',118.585343,33.11981);
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code,LNG,LAT) values('洪泽县朱坝镇粮油管理所',0,1,10,71,746,'32082907',118.55338,33.163646);
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code,LNG,LAT) values('洪泽县高良涧镇粮油管理所',0,1,10,71,746,'32082908',118.52611,33.171461);
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code,LNG,LAT) values('洪泽县唐圩镇粮油管理所',0,1,10,71,746,'32082909',119.052826,33.163020);
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code,LNG,LAT) values('洪泽县老子山镇粮油管理所',0,1,10,71,746,'32082910',118.353864,33.112786);
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code,LNG,LAT) values('洪泽县蒋坝镇粮油管理所',0,1,10,71,746,'32082911',118.435112,33.062023);
+
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID,LONGITUDE,LATITUDE) values('洪泽县三河镇粮油管理所','洪泽县三河镇粮油管理所',0,1,10,71,746,'32082901',1,118.48357,33.073028);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID,LONGITUDE,LATITUDE) values('洪泽县东双沟镇粮油管理所','洪泽县东双沟镇粮油管理所',0,1,10,71,746,'32082902',2,118.51516,33.121175);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID,LONGITUDE,LATITUDE) values('洪泽县共和镇粮油管理所','洪泽县共和镇粮油管理所',0,1,10,71,746,'32082903',3,118.532038,33.061736);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID,LONGITUDE,LATITUDE) values('洪泽县黄集镇粮油管理所','洪泽县黄集镇粮油管理所',0,1,10,71,746,'32082904',4,118.584782,33.212634);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID,LONGITUDE,LATITUDE) values('洪泽县万集镇粮油管理所','洪泽县万集镇粮油管理所',0,1,10,71,746,'32082905',5,118.554152,33.114302);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID,LONGITUDE,LATITUDE) values('洪泽县仁和镇粮食储备库','洪泽县仁和镇粮食储备库',0,1,10,71,746,'32082906',6,118.585343,33.11981);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID,LONGITUDE,LATITUDE) values('洪泽县朱坝镇粮油管理所','洪泽县朱坝镇粮油管理所',0,1,10,71,746,'32082907',7,118.55338,33.163646);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID,LONGITUDE,LATITUDE) values('洪泽县高良涧镇粮油管理所','洪泽县高良涧镇粮油管理所',0,1,10,71,746,'32082908',8,118.52611,33.171461);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID,LONGITUDE,LATITUDE) values('洪泽县唐圩镇粮油管理所','洪泽县唐圩镇粮油管理所',0,1,10,71,746,'32082909',9,119.052826,33.163020);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID,LONGITUDE,LATITUDE) values('洪泽县老子山镇粮油管理所','洪泽县老子山镇粮油管理所',0,1,10,71,746,'32082910',10,118.353864,33.112786);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID,LONGITUDE,LATITUDE) values('洪泽县蒋坝镇粮油管理所','洪泽县蒋坝镇粮油管理所',0,1,10,71,746,'32082911',11,118.435112,33.062023);
+
