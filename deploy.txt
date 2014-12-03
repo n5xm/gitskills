@@ -420,3 +420,19 @@ insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid
 insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('宿迁市宿城区粮食购销总公司陈集粮食储备库','宿迁市宿城区粮食购销总公司陈集粮食储备库',0,1,10,75,769,'32130205',5);
 insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('宿迁市宿城区粮食购销总公司阜子粮食储备库','宿迁市宿城区粮食购销总公司阜子粮食储备库',0,1,10,75,769,'32130206',6);
 
+select * from t_district t
+where t.disName like '泰兴%'
+74,767
+
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('泰兴市横巷粮油经营公司',0,1,10,74,767,'32128301');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('泰兴市元竹粮油经营公司',0,1,10,74,767,'32128302');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('泰兴市南沙粮油经营公司',0,1,10,74,767,'32128303');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('泰兴市张桥粮油经营公司',0,1,10,74,767,'32128304');
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('泰兴市粮食储备库',0,1,10,74,767,'32128305');
+
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('泰兴市横巷粮油经营公司','泰兴市横巷粮油经营公司',0,1,10,74,767,'32128301',1);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('泰兴市元竹粮油经营公司','泰兴市元竹粮油经营公司',0,1,10,74,767,'32128302',2);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('泰兴市南沙粮油经营公司','泰兴市南沙粮油经营公司',0,1,10,74,767,'32128303',3);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('泰兴市张桥粮油经营公司','泰兴市张桥粮油经营公司',0,1,10,74,767,'32128304',4);
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('泰兴市粮食储备库','泰兴市粮食储备库',0,1,10,74,767,'32128305',5);
+
