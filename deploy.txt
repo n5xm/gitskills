@@ -436,3 +436,28 @@ insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid
 insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('泰兴市张桥粮油经营公司','泰兴市张桥粮油经营公司',0,1,10,74,767,'32128304',4);
 insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('泰兴市粮食储备库','泰兴市粮食储备库',0,1,10,74,767,'32128305',5);
 
+select t.*, t.rowid from yw_liangku t
+靖江市区县平台接入资料统计(东兴)673
+靖江市区县平台接入资料统计(季市)676
+靖江市区县平台接入资料统计(马桥)674
+靖江市区县平台接入资料统计(新桥)675
+select t.t_code,t.liangkuid,t.paixunum,t.rongliang from yw_cangku t
+select * from yw_cangku
+update yw_cangku set paixunum=t_code,rongliang=450 where liangkuid=673 and t_code in ('01','02','07','08');
+update yw_cangku set paixunum=t_code,rongliang=250 where liangkuid=673 and t_code in ('03','04');
+update yw_cangku set paixunum=t_code,rongliang=750 where liangkuid=673 and t_code in ('05','06');
+update yw_cangku set paixunum=t_code,rongliang=700 where liangkuid=673 and t_code in ('09','11');
+update yw_cangku set paixunum=t_code,rongliang=500 where liangkuid=673 and t_code in ('10','12');
+update yw_cangku set paixunum=t_code,rongliang=600 where liangkuid=673 and t_code in ('13','14');
+update yw_cangku set paixunum=t_code,rongliang=350 where liangkuid=673 and t_code in ('15','16');
+
+update yw_cangku set paixunum=t_code,rongliang=650 where liangkuid=676 and t_code in ('01','03');
+update yw_cangku set paixunum=t_code,rongliang=800 where liangkuid=676 and t_code in ('02');
+update yw_cangku set paixunum=t_code,rongliang=500 where liangkuid=676 and t_code in ('04','05');
+update yw_cangku set paixunum=t_code,rongliang=2500 where liangkuid=676 and t_code in ('06','07');
+
+update yw_cangku set paixunum=t_code,rongliang=500 where liangkuid=674 and t_code in ('01','02','03');
+update yw_cangku set paixunum=t_code,rongliang=1650 where liangkuid=674 and t_code in ('07','08','09');
+
+update yw_cangku set paixunum=t_code,rongliang=2500 where liangkuid=675 and t_code in ('01','02','09','10');
+update yw_cangku set paixunum=t_code,rongliang=1650 where liangkuid=675 and t_code in ('03','04','05','06','07','08');
