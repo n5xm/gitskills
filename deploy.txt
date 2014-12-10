@@ -461,3 +461,19 @@ update yw_cangku set paixunum=t_code,rongliang=1650 where liangkuid=674 and t_co
 
 update yw_cangku set paixunum=t_code,rongliang=2500 where liangkuid=675 and t_code in ('01','02','09','10');
 update yw_cangku set paixunum=t_code,rongliang=1650 where liangkuid=675 and t_code in ('03','04','05','06','07','08');
+
+粮温三维展示
+UPDATE YW_CANGKU C
+   SET C.SECTIONCOUNT = (SELECT MAX(G.SECTIONNO)
+                           FROM YW_GRAINTEMP G
+                          WHERE G.STORAGEID = C.ID),
+       C.COLCOUNT     = (SELECT MAX(G.COLNO)
+                           FROM YW_GRAINTEMP G
+                          WHERE G.STORAGEID = C.ID),
+       C.LAYERCOUNT   = (SELECT MAX(G.LAYERNO)
+                           FROM YW_GRAINTEMP G
+                          WHERE G.STORAGEID = C.ID);
+UPDATE yw_cangku c SET c.paixunum=c.t_code;
+select count(*) from yw_cangku t where t.sectioncount is not null
+select count(*) from yw_cangku t where t.sectioncount is not null and t.paixunum is not null
+select l.lkname,t.* from yw_cangku t left join yw_liangku l on t.liangkuid=l.id where t.sectioncount is not null and t.paixunum is not null
