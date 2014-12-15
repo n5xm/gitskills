@@ -477,3 +477,27 @@ UPDATE yw_cangku c SET c.paixunum=c.t_code;
 select count(*) from yw_cangku t where t.sectioncount is not null
 select count(*) from yw_cangku t where t.sectioncount is not null and t.paixunum is not null
 select l.lkname,t.* from yw_cangku t left join yw_liangku l on t.liangkuid=l.id where t.sectioncount is not null and t.paixunum is not null
+
+响水县级平台事宜
+请删除入库作业中的2014年11月13号以前的数据，13号之前的数据是测试数据，不是正式收粮数据。
+select * from yw_instorerecord t where indate < to_date('2014/11/13','yyyy/mm/dd')
+select count(*) from yw_instorerecord where flag=0
+update yw_instorerecord t set  t.flag=1 where indate < to_date('2014/11/13','yyyy/mm/dd')
+
+update yw_liangku set LNG=118.496781,LAT=34.048445 where lkname='宿迁市宿豫区来龙粮库';
+update yw_liangku set LNG=118.524268,LAT=33.950907 where lkname='宿迁市宿豫区关庙粮食储销有限公司';
+update yw_liangku set LNG=118.067378,LAT=34.131169 where lkname='宿迁市宿豫区黄墩粮食储销有限公司';
+update yw_liangku set LNG=118.466551,LAT=34.08771 where lkname='宿迁市宿豫区侍岭粮食储销有限公司';
+update yw_liangku set LNG=118.564408,LAT=33.874772 where lkname='宿迁市宿豫区丁嘴粮食储销有限公司';
+update yw_liangku set LNG=118.395157,LAT=33.888349 where lkname='宿迁市宿豫区陆集粮食储销有限公司';
+update yw_liangku set LNG=118.493315,LAT=33.906554 where lkname='宿迁市宿豫区粮食购销公司大兴储备库';
+update yw_liangku set LNG=118.533572,LAT=34.023312 where lkname='宿迁市宿豫区粮食购销公司保安储备库';
+
+update L_GRAINDEPOT set LONGITUDE=118.496781,LATITUDE=34.048445 where GRAINDEPOTNAME='宿迁市宿豫区来龙粮库';
+update L_GRAINDEPOT set LONGITUDE=118.524268,LATITUDE=33.950907 where GRAINDEPOTNAME='宿迁市宿豫区关庙粮食储销有限公司';
+update L_GRAINDEPOT set LONGITUDE=118.067378,LATITUDE=34.131169 where GRAINDEPOTNAME='宿迁市宿豫区黄墩粮食储销有限公司';
+update L_GRAINDEPOT set LONGITUDE=118.466551,LATITUDE=34.08771 where GRAINDEPOTNAME='宿迁市宿豫区侍岭粮食储销有限公司';
+update L_GRAINDEPOT set LONGITUDE=118.564408,LATITUDE=33.874772 where GRAINDEPOTNAME='宿迁市宿豫区丁嘴粮食储销有限公司';
+update L_GRAINDEPOT set LONGITUDE=118.395157,LATITUDE=33.888349 where GRAINDEPOTNAME='宿迁市宿豫区陆集粮食储销有限公司';
+update L_GRAINDEPOT set LONGITUDE=118.493315,LATITUDE=33.906554 where GRAINDEPOTNAME='宿迁市宿豫区粮食购销公司大兴储备库';
+update L_GRAINDEPOT set LONGITUDE=118.533572,LATITUDE=34.023312 where GRAINDEPOTNAME='宿迁市宿豫区粮食购销公司保安储备库';
