@@ -501,3 +501,19 @@ update L_GRAINDEPOT set LONGITUDE=118.564408,LATITUDE=33.874772 where GRAINDEPOT
 update L_GRAINDEPOT set LONGITUDE=118.395157,LATITUDE=33.888349 where GRAINDEPOTNAME='宿迁市宿豫区陆集粮食储销有限公司';
 update L_GRAINDEPOT set LONGITUDE=118.493315,LATITUDE=33.906554 where GRAINDEPOTNAME='宿迁市宿豫区粮食购销公司大兴储备库';
 update L_GRAINDEPOT set LONGITUDE=118.533572,LATITUDE=34.023312 where GRAINDEPOTNAME='宿迁市宿豫区粮食购销公司保安储备库';
+
+select * from yw_cangku
+select SUBSTR(t2.code,4)||'号库',t2.* from yw_cangku t2 where t2.code not like '%号库'
+update yw_cangku set code=(SUBSTR(code,4)||'号库') where id in (select t2.id from yw_cangku t2 where t2.code not like '%号库')
+
+update yw_liangku set LNG=120.261713,LAT=32.208584 where lkname='泰兴市横巷粮油经营公司';
+update yw_liangku set LNG=120.191549,LAT=32.328131 where lkname='泰兴市元竹粮油经营公司';
+update yw_liangku set LNG=120.232399,LAT=32.176727 where lkname='泰兴市南沙粮油经营公司';
+update yw_liangku set LNG=120.075703,LAT=32.118815 where lkname='泰兴市张桥粮油经营公司';
+update yw_liangku set LNG=120.172815,LAT=32.21848 where lkname='泰兴市粮食储备库';
+
+update L_GRAINDEPOT set LONGITUDE=120.261713,LATITUDE=32.208584 where GRAINDEPOTNAME='泰兴市横巷粮油经营公司';
+update L_GRAINDEPOT set LONGITUDE=120.191549,LATITUDE=32.328131 where GRAINDEPOTNAME='泰兴市元竹粮油经营公司';
+update L_GRAINDEPOT set LONGITUDE=120.232399,LATITUDE=32.176727 where GRAINDEPOTNAME='泰兴市南沙粮油经营公司';
+update L_GRAINDEPOT set LONGITUDE=120.075703,LATITUDE=32.118815 where GRAINDEPOTNAME='泰兴市张桥粮油经营公司';
+update L_GRAINDEPOT set LONGITUDE=120.172815,LATITUDE=32.21848 where GRAINDEPOTNAME='泰兴市粮食储备库';
