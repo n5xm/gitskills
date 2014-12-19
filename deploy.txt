@@ -48,6 +48,9 @@ grant connect,resource,dba to grainup;
 imp szla/ictehi@qxpt file=d:\Deploy\qxpt_20141028.dmp full=y ignore=y
 imp szla/ictehi@szla file=d:\Deploy\qxpt_20141028.dmp full=y ignore=y
 imp grainup/ictehi@grainup file=d:\Deploy\grainup_20141027.dmp full=y ignore=y
+
+imp szla/ictehi@qxpt_test file=d:\szla_20141218.dmp full=y ignore=y
+imp grainup/ictehi@grainup_test file=d:\grainup_20141218.dmp full=y ignore=y
 （3）数据初始化：
 qxpt：
 delete from yw_cangku;
@@ -517,3 +520,9 @@ update L_GRAINDEPOT set LONGITUDE=120.191549,LATITUDE=32.328131 where GRAINDEPOT
 update L_GRAINDEPOT set LONGITUDE=120.232399,LATITUDE=32.176727 where GRAINDEPOTNAME='泰兴市南沙粮油经营公司';
 update L_GRAINDEPOT set LONGITUDE=120.075703,LATITUDE=32.118815 where GRAINDEPOTNAME='泰兴市张桥粮油经营公司';
 update L_GRAINDEPOT set LONGITUDE=120.172815,LATITUDE=32.21848 where GRAINDEPOTNAME='泰兴市粮食储备库';
+
+select * from L_county t
+where t.countyname like '新沂%'
+70,739
+
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('江苏新海岸国际物流有限公司','江苏新海岸国际物流有限公司',0,1,10,70,739,'32038111',11);
