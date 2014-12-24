@@ -526,3 +526,14 @@ where t.countyname like '新沂%'
 70,739
 
 insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('江苏新海岸国际物流有限公司','江苏新海岸国际物流有限公司',0,1,10,70,739,'32038111',11);
+
+实时库存和入库记录总计，数据不对应问题
+select sum(t.paidweight) from yw_instorerecord t
+where t.store_id =2401 and t.state=1;
+
+select * from yw_cangku t2
+left join yw_liangku t3 on t2.liangkuid=t3.id
+where t3.lkname like '%张集%';
+
+select * from yw_cangkuinit t where t.cangkuid =2402;
+
