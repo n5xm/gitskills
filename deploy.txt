@@ -466,6 +466,7 @@ update yw_cangku set paixunum=t_code,rongliang=2500 where liangkuid=675 and t_co
 update yw_cangku set paixunum=t_code,rongliang=1650 where liangkuid=675 and t_code in ('03','04','05','06','07','08');
 
 粮温三维展示
+//start///////////////////////////////////////////////////////////////////////////////////////////////////
 UPDATE YW_CANGKU C
    SET C.SECTIONCOUNT = (SELECT MAX(G.SECTIONNO)
                            FROM YW_GRAINTEMP G
@@ -480,6 +481,26 @@ UPDATE yw_cangku c SET c.paixunum=c.t_code;
 select count(*) from yw_cangku t where t.sectioncount is not null
 select count(*) from yw_cangku t where t.sectioncount is not null and t.paixunum is not null
 select l.lkname,t.* from yw_cangku t left join yw_liangku l on t.liangkuid=l.id where t.sectioncount is not null and t.paixunum is not null
+
+select * from yw_liangku;
+select * from yw_cangku t where t.liangkuid=595;
+
+select * from yw_graintemp t  where t.liangkuid=595 and t.storageid=2606
+and t.sectionno=4 and t.colno=4 and t.layerno=3
+order by t.changetime desc
+
+with a as(select distinct max(t.meastime) meastime, t.layerno ,t.colno ,t.sectionno
+from yw_graintemp t where 1=1 and t.measvalue<=50 and t.measvalue>=-10 and t.storageid=2606
+group by t.layerno ,t.colno ,t.sectionno)
+SELECT T.*
+  FROM YW_GRAINTEMP T, A
+ WHERE T.MEASTIME = A.MEASTIME
+   AND T.LAYERNO = A.LAYERNO
+   AND T.SECTIONNO = A.SECTIONNO
+   AND T.COLNO = A.COLNO
+   AND T.STORAGEID = 2606
+and t.layerno=1
+//end////////////////////////////////////////////////////////////////////////////////////////////////////
 
 响水县级平台事宜
 请删除入库作业中的2014年11月13号以前的数据，13号之前的数据是测试数据，不是正式收粮数据。
