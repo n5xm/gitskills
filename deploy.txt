@@ -558,3 +558,9 @@ where t3.lkname like '%张集%';
 
 select * from yw_cangkuinit t where t.cangkuid =2402;
 
+select * from t_district t
+where t.disName like '惠山%'
+64,685
+insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('惠山玉祁粮库',0,1,10,64,685,'32020604');
+
+insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('惠山玉祁粮库','惠山玉祁粮库',0,1,10,64,685,'32020604',4);
