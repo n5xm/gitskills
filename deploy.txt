@@ -97,6 +97,8 @@ exp grainup/ictehi@grainup file=c:\grainup_20141027.dmp
 单单导出导入grainup数据库中的user相关表
 exp grainup/ictehi@grainup file=d:\grainup_user.dmp tables=(M_USER,L_PROVINCE,L_CITY,L_COUNTY)
 imp grainup/ictehi@grainup file=d:\grainup_user.dmp full=y
+IMP szla/ictehi@qxpt file=D:\qxpt_20150129.dmp IGNORE=Y TABLES=(yw_lsxingzhi,yw_cangkuinit) FULL=N
+IMP szla/ictehi@qxpt file=D:\qxpt_20150129.dmp IGNORE=Y TABLES=(yw_lsxingzhi) FULL=N
 
 select * from t_province t
 where t.proName='江苏省'
