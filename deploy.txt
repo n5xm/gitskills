@@ -99,6 +99,7 @@ exp grainup/ictehi@grainup file=d:\grainup_user.dmp tables=(M_USER,L_PROVINCE,L_
 imp grainup/ictehi@grainup file=d:\grainup_user.dmp full=y
 IMP szla/ictehi@qxpt file=D:\qxpt_20150129.dmp IGNORE=Y TABLES=(yw_lsxingzhi,yw_cangkuinit) FULL=N
 IMP szla/ictehi@qxpt file=D:\qxpt_20150129.dmp IGNORE=Y TABLES=(yw_lsxingzhi) FULL=N
+grant create sequence to szla;
 
 select * from t_province t
 where t.proName='江苏省'
