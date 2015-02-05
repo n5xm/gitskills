@@ -102,6 +102,11 @@ IMP szla/ictehi@qxpt file=D:\qxpt_20150129.dmp IGNORE=Y TABLES=(yw_lsxingzhi) FU
 grant create sequence to szla;
 grant create procedure to szla;
 
+exp szla/ictehi@szla file=c:\szla_206_20150204.dmp
+exp grainup/ictehi@grainup file=c:\grainup_206_20150204.dmp
+exp graindc/123456@graindc file=c:\graindc_206_20150204.dmp
+exp szla/ictehi@szla file=c:\szla_206_20150204.dmp
+
 select * from t_province t
 where t.proName='江苏省'
 select * from t_city t
@@ -492,6 +497,8 @@ select * from yw_cangku t where t.liangkuid=595;
 select * from yw_graintemp t  where t.liangkuid=595 and t.storageid=2606
 and t.sectionno=4 and t.colno=4 and t.layerno=3
 order by t.changetime desc
+
+select count(*),liangkuid from yw_graintemp group by liangkuid
 
 with a as(select distinct max(t.meastime) meastime, t.layerno ,t.colno ,t.sectionno
 from yw_graintemp t where 1=1 and t.measvalue<=50 and t.measvalue>=-10 and t.storageid=2606
