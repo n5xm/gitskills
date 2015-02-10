@@ -107,6 +107,16 @@ exp grainup/ictehi@grainup file=c:\grainup_206_20150204.dmp
 exp graindc/123456@graindc file=c:\graindc_206_20150204.dmp
 exp szla/ictehi@szla file=c:\szla_206_20150204.dmp
 
+====================================================MySQL start
+mysqldump -u root -p teststruts>D:teststruts.sql
+mysqldump -u root -p teststruts>D:\teststruts.sql
+mysqldump -u root -p teststruts>D:\\teststruts.sql
+
+mysql -u root -p
+use eoffice
+source E:\backups\eoffice_206_20150210.sql
+====================================================MySQL end
+
 select * from t_province t
 where t.proName='江苏省'
 select * from t_city t
