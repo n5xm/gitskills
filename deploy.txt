@@ -585,3 +585,130 @@ where t.disName like '惠山%'
 insert into yw_liangku(lkname,flag,LEVELS,province,city,district,t_code) values('惠山玉祁粮库',0,1,10,64,685,'32020604');
 
 insert into L_GRAINDEPOT(GRAINDEPOTNAME,GRAINDEPOTSHORT,CLOSED,LEVELS,provinceid,cityid,COUNTYID,GRAINDEPOTCODE,GRAINDEPOTID) values('惠山玉祁粮库','惠山玉祁粮库',0,1,10,64,685,'32020604',4);
+
+淮阴
+select t.*, t.rowid from yw_liangku t
+1	524	南陈集粮库
+2	523	吴城粮库
+3	525	赵集粮库
+4	526	码头粮站
+5	527	古寨粮库
+6	528	韩庄粮库
+7	529	三树粮库
+8	530	袁集粮库
+9	531	徐溜粮库
+10	532	刘老庄粮库
+11	533	棉花粮库
+12	534	五里粮库
+13	535	老张集粮库
+14	536	王兴粮库
+15	537	新渡粮库
+16	538	大兴粮库
+17	539	汤集粮库
+18	540	王营粮库
+19	541	凌桥粮库
+20	542	蒋集粮库
+21	543	西宋集粮库
+22	544	北吴集粮库
+23	545	韩圩粮库
+24	521	韩桥粮库
+25	522	渔沟粮库
+26	546	丁集粮库
+select t.t_code,t.liangkuid,t.paixunum,t.rongliang from yw_cangku t
+select * from yw_cangku
+update yw_cangku set paixunum=t_code,rongliang=450 where liangkuid=524 and t_code in ('01','02','03');
+update yw_cangku set paixunum=t_code,rongliang=150 where liangkuid=524 and t_code in ('05','04');
+
+update yw_cangku set paixunum=t_code,rongliang=500 where liangkuid=523 and t_code in ('01');
+update yw_cangku set paixunum=t_code,rongliang=300 where liangkuid=523 and t_code in ('02');
+update yw_cangku set paixunum=t_code,rongliang=125 where liangkuid=523 and t_code in ('03','04');
+update yw_cangku set paixunum=t_code,rongliang=600 where liangkuid=523 and t_code in ('05','06','07');
+
+update yw_cangku set paixunum=t_code,rongliang=500 where liangkuid=525 and t_code in ('01','03');
+update yw_cangku set paixunum=t_code,rongliang=800 where liangkuid=525 and t_code in ('02');
+
+update yw_cangku set paixunum=t_code,rongliang=500 where liangkuid=526 and t_code in ('01','02','03','06','07','08');
+update yw_cangku set paixunum=t_code,rongliang=125 where liangkuid=526 and t_code in ('04','05');
+
+update yw_cangku set paixunum=t_code,rongliang=800 where liangkuid=527 and t_code in ('01');
+update yw_cangku set paixunum=t_code,rongliang=1200 where liangkuid=527 and t_code in ('02');
+update yw_cangku set paixunum=t_code,rongliang=150 where liangkuid=527 and t_code in ('03','04','05','06');
+
+update yw_cangku set paixunum=t_code,rongliang=1200 where liangkuid=528 and t_code in ('01');
+update yw_cangku set paixunum=t_code,rongliang=800 where liangkuid=528 and t_code in ('02');
+
+update yw_cangku set paixunum=t_code,rongliang=1200 where liangkuid=529 and t_code in ('01','03');
+update yw_cangku set paixunum=t_code,rongliang=800 where liangkuid=529 and t_code in ('02','04');
+update yw_cangku set paixunum=t_code,rongliang=2400 where liangkuid=529 and t_code in ('05');
+update yw_cangku set paixunum=t_code,rongliang=1800 where liangkuid=529 and t_code in ('06');
+update yw_cangku set paixunum=t_code,rongliang=2200 where liangkuid=529 and t_code in ('07');
+update yw_cangku set paixunum=t_code,rongliang=1600 where liangkuid=529 and t_code in ('08');
+
+update yw_cangku set paixunum=t_code,rongliang=500 where liangkuid=530 and t_code in ('01','02','03','04','05','06');
+
+update yw_cangku set paixunum=t_code,rongliang=850 where liangkuid=531 and t_code in ('01','02');
+update yw_cangku set paixunum=t_code,rongliang=150 where liangkuid=531 and t_code in ('03','04');
+
+update yw_cangku set paixunum=t_code,rongliang=600 where liangkuid=532 and t_code in ('01','02','03');
+update yw_cangku set paixunum=t_code,rongliang=1200 where liangkuid=532 and t_code in ('04');
+update yw_cangku set paixunum=t_code,rongliang=700 where liangkuid=532 and t_code in ('05');
+update yw_cangku set paixunum=t_code,rongliang=150 where liangkuid=532 and t_code in ('06','07');
+
+update yw_cangku set paixunum=t_code,rongliang=500 where liangkuid=533 and t_code in ('01','02','03');
+update yw_cangku set paixunum=t_code,rongliang=200 where liangkuid=533 and t_code in ('04','06');
+update yw_cangku set paixunum=t_code,rongliang=350 where liangkuid=533 and t_code in ('05');
+
+update yw_cangku set paixunum=t_code,rongliang=850 where liangkuid=534 and t_code in ('01','02','03','04');
+update yw_cangku set paixunum=t_code,rongliang=450 where liangkuid=534 and t_code in ('05','06');
+
+update yw_cangku set paixunum=t_code,rongliang=600 where liangkuid=535 and t_code in ('01','02','03');
+update yw_cangku set paixunum=t_code,rongliang=500 where liangkuid=535 and t_code in ('04');
+update yw_cangku set paixunum=t_code,rongliang=1000 where liangkuid=535 and t_code in ('05');
+
+update yw_cangku set paixunum=t_code,rongliang=500 where liangkuid=536 and t_code in ('01','02','03','04','05','06');
+
+update yw_cangku set paixunum=t_code,rongliang=1200 where liangkuid=537 and t_code in ('01','03');
+update yw_cangku set paixunum=t_code,rongliang=800 where liangkuid=537 and t_code in ('02','04');
+
+update yw_cangku set paixunum=t_code,rongliang=800 where liangkuid=538 and t_code in ('01','02','03','04');
+
+update yw_cangku set paixunum=t_code,rongliang=125 where liangkuid=539 and t_code in ('01','02','03','04');
+update yw_cangku set paixunum=t_code,rongliang=500 where liangkuid=539 and t_code in ('05');
+update yw_cangku set paixunum=t_code,rongliang=1000 where liangkuid=539 and t_code in ('06');
+update yw_cangku set paixunum=t_code,rongliang=450 where liangkuid=539 and t_code in ('07','08','09');
+
+update yw_cangku set paixunum=t_code,rongliang=550 where liangkuid=540 and t_code in ('01','02','03');
+update yw_cangku set paixunum=t_code,rongliang=400 where liangkuid=540 and t_code in ('05','04','06');
+
+update yw_cangku set paixunum=t_code,rongliang=500 where liangkuid=541 and t_code in ('01','03','05','06','07');
+update yw_cangku set paixunum=t_code,rongliang=1000 where liangkuid=541 and t_code in ('02','04');
+
+update yw_cangku set paixunum=t_code,rongliang=500 where liangkuid=542 and t_code in ('01','02','03','04','05','06');
+update yw_cangku set paixunum=t_code,rongliang=250 where liangkuid=542 and t_code in ('07');
+
+update yw_cangku set paixunum=t_code,rongliang=500 where liangkuid=543 and t_code in ('01','02','05','06','07');
+update yw_cangku set paixunum=t_code,rongliang=125 where liangkuid=543 and t_code in ('03','04','08','09');
+
+update yw_cangku set paixunum=t_code,rongliang=400 where liangkuid=544 and t_code in ('01');
+update yw_cangku set paixunum=t_code,rongliang=500 where liangkuid=544 and t_code in ('02');
+update yw_cangku set paixunum=t_code,rongliang=450 where liangkuid=544 and t_code in ('03','04','05','06');
+update yw_cangku set paixunum=t_code,rongliang=300 where liangkuid=544 and t_code in ('07');
+
+update yw_cangku set paixunum=t_code,rongliang=250 where liangkuid=545 and t_code in ('01','03');
+update yw_cangku set paixunum=t_code,rongliang=500 where liangkuid=545 and t_code in ('02');
+update yw_cangku set paixunum=t_code,rongliang=600 where liangkuid=545 and t_code in ('04','05','06');
+
+update yw_cangku set paixunum=t_code,rongliang=1200 where liangkuid=521 and t_code in ('01');
+update yw_cangku set paixunum=t_code,rongliang=800 where liangkuid=521 and t_code in ('02');
+
+update yw_cangku set paixunum=t_code,rongliang=650 where liangkuid=522 and t_code in ('03','10','11','12','13','14','22','23');
+update yw_cangku set paixunum=t_code,rongliang=1300 where liangkuid=522 and t_code in ('04','09','15');
+update yw_cangku set paixunum=t_code,rongliang=1500 where liangkuid=522 and t_code in ('05','06','16','19','20','21');
+update yw_cangku set paixunum=t_code,rongliang=1000 where liangkuid=522 and t_code in ('07');
+update yw_cangku set paixunum=t_code,rongliang=700 where liangkuid=522 and t_code in ('08');
+update yw_cangku set paixunum=t_code,rongliang=1600 where liangkuid=522 and t_code in ('17','18');
+
+update yw_cangku set paixunum=t_code,rongliang=800 where liangkuid=546 and t_code in ('01','02','03');
+update yw_cangku set paixunum=t_code,rongliang=500 where liangkuid=546 and t_code in ('04');
+update yw_cangku set paixunum=t_code,rongliang=200 where liangkuid=546 and t_code in ('05');
+update yw_cangku set paixunum=t_code,rongliang=400 where liangkuid=546 and t_code in ('06');
