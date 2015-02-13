@@ -1,10 +1,11 @@
 create or replace procedure UPDATE_GRAINATTR(counterStatic in number) as
-  counter          number := counterStatic;
-  count_name       number;
-  count_code       number;
-  count_cangkuinit integer := -1;
-  count_CRFANGAN   integer := -1;
-  count_CANGKU     integer := -1;
+  counter             number := counterStatic;
+  count_name          number;
+  count_code          number;
+  count_cangkuinit    integer := -1;
+  count_CRFANGAN      integer := -1;
+  count_CANGKU        integer := -1;
+  count_INSTORERECORD integer := -1;
   /*
   defaultStr       varchar2(8) := 'zero';
   grainattr_ids VARCHAR2(10000);
@@ -32,7 +33,7 @@ begin
 
   if count_code <= count_name then
     OPEN v_grainattr FOR
-      SELECT distinct t_code FROM yw_lsxingzhi;
+      SELECT distinct t_code FROM yw_lsxingzhi order by t_code;
     LOOP
       FETCH v_grainattr
         INTO v_code;
@@ -55,7 +56,57 @@ begin
                      */
       counter := counter + 1;
       DBMS_OUTPUT.PUT_LINE(counter);
-      --yw_lsxingzhi end
+      select count(*)
+        into count_cangkuinit
+        from yw_cangkuinit t
+       where t.xingzhi_id <= counterStatic
+         and t.xingzhi_id in
+             (select id from yw_lsxingzhi WHERE t_code = v_code);
+      if count_cangkuinit > 0 then
+        update yw_cangkuinit t
+           set t.xingzhi_id = counter
+         where t.xingzhi_id in
+               (select id from yw_lsxingzhi WHERE t_code = v_code);
+        DBMS_OUTPUT.PUT_LINE('update yw_cangkuinit');
+      end if;
+      select count(*)
+        into count_CRFANGAN
+        from YW_CRFANGAN
+       where LSXINGZHI <= counterStatic
+         and LSXINGZHI in
+             (select id from yw_lsxingzhi WHERE t_code = v_code);
+      if (count_CRFANGAN > 0) then
+        update YW_CRFANGAN
+           set LSXINGZHI = counter
+         where LSXINGZHI in
+               (select id from yw_lsxingzhi WHERE t_code = v_code);
+        DBMS_OUTPUT.PUT_LINE('update YW_CRFANGAN');
+      end if;
+      select count(*)
+        into count_CANGKU
+        from YW_CANGKU
+       where NOWXZID <= counterStatic
+         and NOWXZID in (select id from yw_lsxingzhi WHERE t_code = v_code);
+      if (count_CANGKU > 0) then
+        update YW_CANGKU
+           set NOWXZID = counter
+         where NOWXZID in
+               (select id from yw_lsxingzhi WHERE t_code = v_code);
+        DBMS_OUTPUT.PUT_LINE('update YW_CANGKU');
+      end if;
+      select count(*)
+        into count_INSTORERECORD
+        from YW_INSTORERECORD
+       where DISTRICT <= counterStatic
+         and DISTRICT in
+             (select id from yw_lsxingzhi WHERE t_code = v_code);
+      if (count_CANGKU > 0) then
+        update YW_INSTORERECORD
+           set DISTRICT = counter
+         where DISTRICT in
+               (select id from yw_lsxingzhi WHERE t_code = v_code);
+        DBMS_OUTPUT.PUT_LINE('update YW_INSTORERECORD');
+      end if;
       SELECT count(*)
         INTO count_grainattr
         FROM yw_lsxingzhi
@@ -88,51 +139,6 @@ begin
           DBMS_OUTPUT.PUT_LINE('update yw_lsxingzhi' || counter);
         end if;
       end if;
-      --yw_lsxingzhi end
-      --yw_cangkuinit start
-      select count(*)
-        into count_cangkuinit
-        from yw_cangkuinit t
-       where t.xingzhi_id <= counterStatic
-         and t.xingzhi_id in
-             (select id from yw_lsxingzhi WHERE t_code = v_code);
-      if count_cangkuinit > 0 then
-        update yw_cangkuinit t
-           set t.xingzhi_id = counter
-         where t.xingzhi_id in
-               (select id from yw_lsxingzhi WHERE t_code = v_code);
-        DBMS_OUTPUT.PUT_LINE('update yw_cangkuinit');
-      end if;
-      --yw_cangkuinit end
-      --YW_CRFANGAN start
-      select count(*)
-        into count_CRFANGAN
-        from YW_CRFANGAN
-       where LSXINGZHI <= counterStatic
-         and LSXINGZHI in
-             (select id from yw_lsxingzhi WHERE t_code = v_code);
-      if (count_CRFANGAN > 0) then
-        update YW_CRFANGAN
-           set LSXINGZHI = counter
-         where LSXINGZHI in
-               (select id from yw_lsxingzhi WHERE t_code = v_code);
-        DBMS_OUTPUT.PUT_LINE('update YW_CRFANGAN');
-      end if;
-      --YW_CRFANGAN end
-      --YW_CANGKU start 
-      select count(*)
-        into count_CANGKU
-        from YW_CANGKU
-       where NOWXZID <= counterStatic
-         and NOWXZID in (select id from yw_lsxingzhi WHERE t_code = v_code);
-      if (count_CANGKU > 0) then
-        update YW_CANGKU
-           set NOWXZID = counter
-         where NOWXZID in
-               (select id from yw_lsxingzhi WHERE t_code = v_code);
-        DBMS_OUTPUT.PUT_LINE('update YW_CANGKU');
-      end if;
-      --YW_CANGKU end
     END LOOP;
   
   else
@@ -145,7 +151,6 @@ begin
       dbms_output.put_line('name=' || v_name);
       counter := counter + 1;
       DBMS_OUTPUT.PUT_LINE(counter);
-      --yw_cangkuinit start
       select count(*)
         into count_cangkuinit
         from yw_cangkuinit t
@@ -159,8 +164,6 @@ begin
                (select id from yw_lsxingzhi WHERE name = v_name);
         DBMS_OUTPUT.PUT_LINE('update yw_cangkuinit');
       end if;
-      --yw_cangkuinit end
-      --yw_lsxingzhi end
       /*
       SELECT count(*)
         INTO count_grainattr
@@ -194,15 +197,8 @@ begin
         end if;
       end if;
       */
-      --yw_lsxingzhi end
     END LOOP;
   end if;
-
-  --delete start
-  --commit;
-  -- DBMS_OUTPUT.PUT_LINE('delete yw_lsxingzhi');
-  --delete yw_lsxingzhi where id <= counter;
-  --delete end
 
   commit;
   --rollback;

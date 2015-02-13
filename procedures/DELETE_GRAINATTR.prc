@@ -4,7 +4,6 @@ create or replace procedure DELETE_GRAINATTR(counterStatic in number) as
   count_CRFANGAN   integer := -1;
   count_CANGKU     integer := -1;
 begin
-  --delete start
   select count(*)
     into count_grainattr
     from yw_lsxingzhi
@@ -30,6 +29,5 @@ begin
       DBMS_OUTPUT.PUT_LINE('refid<=' || counterStatic);
     end if;
   end if;
-  --delete end
 end DELETE_GRAINATTR;
 /

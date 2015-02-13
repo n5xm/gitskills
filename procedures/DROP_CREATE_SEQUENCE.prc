@@ -1,13 +1,11 @@
-create or replace procedure DROP_CREATE_SEQUENCE (procName  in varchar2,
+create or replace procedure DROP_CREATE_SEQUENCE(procName  in varchar2,
                                                  startWith in number,
                                                  resultStr out varchar2) as
-  --引用user_tables表中的tableName的类型;  
   sequenceName user_sequences.sequence_name%type;
   mycount      number(10);
   result_ok    varchar(8) := 'ok';
   result_error varchar(8) := 'error';
 begin
-  --把存储过程传过来的参数，赋值给tableName;  
   sequenceName := procName;
   SELECT COUNT(*)
     INTO mycount
@@ -26,6 +24,5 @@ begin
 EXCEPTION
   WHEN OTHERS THEN
     resultStr := result_error;
-    --ROLLBACK TO SAVEPOINT sp;
 end;
 /

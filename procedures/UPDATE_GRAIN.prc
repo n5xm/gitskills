@@ -23,23 +23,22 @@ begin
 
   if count_code <= count_name then
     OPEN v_grain FOR
-      SELECT distinct t_code FROM yw_foodleibie;
+      SELECT distinct t_code FROM yw_foodleibie order by t_code;
     LOOP
       FETCH v_grain
         INTO v_code;
       EXIT WHEN v_grain%NOTFOUND;
       dbms_output.put_line('t_code=' || v_code);
       counter := counter + 1;
-      --yw_foodleibie start
       SELECT count(*)
         INTO count_grain
         FROM yw_foodleibie
        WHERE id = counter;
       if (count_grain is null or count_grain = 0) then
-        select minid
+        select maxid
           into grain_id
-          from (select minid
-                  from (select count(*) count_code, foodname, min(id) minid
+          from (select maxid
+                  from (select count(*) count_code, foodname, max(id) maxid
                           from yw_foodleibie
                          where t_code = v_code
                          group by foodname)
@@ -103,10 +102,10 @@ begin
         end if;
       
       else
-        select foodname, minid
+        select foodname, maxid
           into foodname, grain_id
-          from (select foodname, minid
-                  from (select count(*) count_code, foodname, min(id) minid
+          from (select foodname, maxid
+                  from (select count(*) count_code, foodname, max(id) maxid
                           from yw_foodleibie
                          where t_code = v_code
                          group by foodname)
@@ -118,14 +117,12 @@ begin
         end if;
         commit;
       end if;
-      --yw_foodleibie end
     
       SELECT count(*)
         INTO count_grain
         FROM yw_foodleibie
        WHERE id = counter;
       if (count_grain > 0) then
-        --yw_cangkuinit start
         select count(*)
           into count_cangkuinit
           from yw_cangkuinit
@@ -139,8 +136,6 @@ begin
                  (select id from yw_foodleibie WHERE t_code = v_code);
           DBMS_OUTPUT.PUT_LINE('update yw_cangkuinit');
         end if;
-        --yw_cangkuinit end
-        --yw_crtongcang start
         select count(*)
           into count_cangkuinit
           from yw_crtongcang
@@ -154,8 +149,6 @@ begin
                  (select id from yw_foodleibie WHERE t_code = v_code);
           DBMS_OUTPUT.PUT_LINE('update yw_crtongcang');
         end if;
-        --yw_crtongcang end
-        --YW_LXYPJY start
         select count(*)
           into count_cangkuinit
           from YW_LXYPJY
@@ -168,8 +161,6 @@ begin
                  (select id from yw_foodleibie WHERE t_code = v_code);
           DBMS_OUTPUT.PUT_LINE('update YW_LXYPJY');
         end if;
-        --YW_LXYPJY end
-        --YW_INSTORERECORD start
         select count(*)
           into count_cangkuinit
           from YW_INSTORERECORD
@@ -183,8 +174,6 @@ begin
                  (select id from yw_foodleibie WHERE t_code = v_code);
           DBMS_OUTPUT.PUT_LINE('update YW_INSTORERECORD');
         end if;
-        --YW_INSTORERECORD end
-        --YW_CRFANGAN start
         select count(*)
           into count_CRFANGAN
           from YW_CRFANGAN
@@ -198,7 +187,6 @@ begin
                  (select id from yw_foodleibie WHERE t_code = v_code);
           DBMS_OUTPUT.PUT_LINE('update YW_CRFANGAN');
         end if;
-        --YW_CRFANGAN end
       end if;
     END LOOP;
   
