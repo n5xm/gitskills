@@ -1,4 +1,5 @@
-create or replace procedure UPDATE_GRAIN(counterStatic in number) as
+create or replace procedure UPDATE_GRAIN(counterStatic in number,
+                                         counterLast   out number) as
   counter             number := counterStatic;
   count_name          number;
   count_code          number;
@@ -126,65 +127,83 @@ begin
         select count(*)
           into count_cangkuinit
           from yw_cangkuinit
-         where FOODPINZHONG_ID <= counterStatic
-           and FOODPINZHONG_ID in
-               (select id from yw_foodleibie WHERE t_code = v_code);
+         where FOODPINZHONG_ID in (select id
+                                     from yw_foodleibie
+                                    WHERE t_code = v_code
+                                      and id <> counter);
         if (count_cangkuinit > 0) then
           update yw_cangkuinit
              set FOODPINZHONG_ID = counter
            where FOODPINZHONG_ID in
-                 (select id from yw_foodleibie WHERE t_code = v_code);
+                 (select id
+                    from yw_foodleibie
+                   WHERE t_code = v_code
+                     and id <> counter);
           DBMS_OUTPUT.PUT_LINE('update yw_cangkuinit');
         end if;
         select count(*)
-          into count_cangkuinit
+          into count_crtongcang
           from yw_crtongcang
-         where FOODPZID <= counterStatic
-           and FOODPZID in
-               (select id from yw_foodleibie WHERE t_code = v_code);
-        if (count_cangkuinit > 0) then
+         where FOODPZID in (select id
+                              from yw_foodleibie
+                             WHERE t_code = v_code
+                               and id <> counter);
+        if (count_crtongcang > 0) then
           update yw_crtongcang
              set FOODPZID = counter
-           where FOODPZID in
-                 (select id from yw_foodleibie WHERE t_code = v_code);
+           where FOODPZID in (select id
+                                from yw_foodleibie
+                               WHERE t_code = v_code
+                                 and id <> counter);
           DBMS_OUTPUT.PUT_LINE('update yw_crtongcang');
         end if;
         select count(*)
-          into count_cangkuinit
+          into count_LXYPJY
           from YW_LXYPJY
-         where PZID <= counterStatic
-           and PZID in (select id from yw_foodleibie WHERE t_code = v_code);
-        if (count_cangkuinit > 0) then
+         where PZID in (select id
+                          from yw_foodleibie
+                         WHERE t_code = v_code
+                           and id <> counter);
+        if (count_LXYPJY > 0) then
           update YW_LXYPJY
              set PZID = counter
-           where PZID in
-                 (select id from yw_foodleibie WHERE t_code = v_code);
+           where PZID in (select id
+                            from yw_foodleibie
+                           WHERE t_code = v_code
+                             and id <> counter);
           DBMS_OUTPUT.PUT_LINE('update YW_LXYPJY');
         end if;
         select count(*)
-          into count_cangkuinit
+          into count_INSTORERECORD
           from YW_INSTORERECORD
-         where FOODPINZHONG_ID <= counterStatic
-           and FOODPINZHONG_ID in
-               (select id from yw_foodleibie WHERE t_code = v_code);
-        if (count_cangkuinit > 0) then
+         where FOODPINZHONG_ID in (select id
+                                     from yw_foodleibie
+                                    WHERE t_code = v_code
+                                      and id <> counter);
+        if (count_INSTORERECORD > 0) then
           update YW_INSTORERECORD
              set FOODPINZHONG_ID = counter
            where FOODPINZHONG_ID in
-                 (select id from yw_foodleibie WHERE t_code = v_code);
+                 (select id
+                    from yw_foodleibie
+                   WHERE t_code = v_code
+                     and id <> counter);
           DBMS_OUTPUT.PUT_LINE('update YW_INSTORERECORD');
         end if;
         select count(*)
           into count_CRFANGAN
           from YW_CRFANGAN
-         where LSPINZHONG <= counterStatic
-           and LSPINZHONG in
-               (select id from yw_foodleibie WHERE t_code = v_code);
+         where LSPINZHONG in (select id
+                                from yw_foodleibie
+                               WHERE t_code = v_code
+                                 and id <> counter);
         if (count_CRFANGAN > 0) then
           update YW_CRFANGAN
              set LSPINZHONG = counter
-           where LSPINZHONG in
-                 (select id from yw_foodleibie WHERE t_code = v_code);
+           where LSPINZHONG in (select id
+                                  from yw_foodleibie
+                                 WHERE t_code = v_code
+                                   and id <> counter);
           DBMS_OUTPUT.PUT_LINE('update YW_CRFANGAN');
         end if;
       end if;
@@ -194,6 +213,7 @@ begin
     DBMS_OUTPUT.PUT_LINE('name');
   end if;
 
+  counterLast := counter;
   commit;
 end UPDATE_GRAIN;
 /
