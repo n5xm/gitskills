@@ -4,7 +4,7 @@ create or replace procedure DELETE_GRAIN(counterStatic in number) as
   count_crtongcang    integer := -1;
   count_LXYPJY        integer := -1;
   count_INSTORERECORD integer := -1;
-
+  count_CRFANGAN      integer := -1;
 begin
   --delete start
   select count(*)
@@ -27,11 +27,15 @@ begin
     into count_INSTORERECORD
     from yw_INSTORERECORD
    where FOODPINZHONG_ID <= counterStatic;
+  select count(*)
+    into count_CRFANGAN
+    from YW_CRFANGAN
+   where LSPINZHONG <= counterStatic;
   if count_grain > 0 then
     if (count_cangkuinit = 0 and count_crtongcang = 0 and
-       count_INSTORERECORD = 0 and count_LXYPJY = 0) then
+       count_INSTORERECORD = 0 and count_LXYPJY = 0 and count_CRFANGAN = 0) then
       delete yw_foodleibie where id <= counterStatic;
-      DBMS_OUTPUT.PUT_LINE('delete yw_foodleibie');
+      DBMS_OUTPUT.PUT_LINE('delete yw_lsxingzhi');
       commit;
     else
       DBMS_OUTPUT.PUT_LINE('refid<=' || counterStatic);

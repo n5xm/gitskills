@@ -1,6 +1,8 @@
 create or replace procedure DELETE_GRAINATTR(counterStatic in number) as
   count_grainattr  integer := -1;
   count_cangkuinit integer := -1;
+  count_CRFANGAN   integer := -1;
+  count_CANGKU     integer := -1;
 begin
   --delete start
   select count(*)
@@ -11,6 +13,14 @@ begin
     into count_cangkuinit
     from yw_cangkuinit
    where xingzhi_id <= counterStatic;
+  select count(*)
+    into count_CRFANGAN
+    from YW_CRFANGAN
+   where LSXINGZHI <= counterStatic;
+  select count(*)
+    into count_CANGKU
+    from YW_CANGKU
+   where NOWXZID <= counterStatic;
   if count_grainattr > 0 then
     if (count_cangkuinit = 0) then
       delete yw_lsxingzhi where id <= counterStatic;

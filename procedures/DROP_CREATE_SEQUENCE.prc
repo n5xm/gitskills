@@ -1,4 +1,4 @@
-create or replace procedure DROP_CREATE_SEQUENCE(procName  in varchar2,
+create or replace procedure DROP_CREATE_SEQUENCE (procName  in varchar2,
                                                  startWith in number,
                                                  resultStr out varchar2) as
   --引用user_tables表中的tableName的类型;  
