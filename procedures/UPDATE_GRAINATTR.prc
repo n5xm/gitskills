@@ -18,6 +18,7 @@ create or replace procedure UPDATE_GRAINATTR(counterStatic in number) as
   v_name          yw_lsxingzhi.name%TYPE;
   grainattr_id    number;
   count_grainattr integer := -1;
+  grainattr_name  varchar2(100);
 begin
   /*
   select count(*)
@@ -75,14 +76,30 @@ begin
       if count_grainattr is null or count_grainattr = 0 then
         select minid
           into grainattr_id
-          from (select count(*) count_code, name, min(id) minid
-                  from yw_lsxingzhi
-                 where t_code = v_code
-                 group by name)
-         where rownum = 1
-         order by count_code;
+          from (select minid
+                  from (select count(*) count_code, name, min(id) minid
+                          from yw_lsxingzhi
+                         where t_code = v_code
+                         group by name)
+                 order by count_code desc)
+         where rownum = 1;
         update yw_lsxingzhi set id = counter where id = grainattr_id;
         DBMS_OUTPUT.PUT_LINE('update yw_lsxingzhi');
+      
+      else
+        select name, minid
+          into grainattr_name, grainattr_id
+          from (select name, minid
+                  from (select count(*) count_code, name, min(id) minid
+                          from yw_lsxingzhi
+                         where t_code = v_code
+                         group by name)
+                 order by count_code desc)
+         where rownum = 1;
+        if (counter != grainattr_id) then
+          update yw_lsxingzhi set name = grainattr_name where id = counter;
+          DBMS_OUTPUT.PUT_LINE('update yw_lsxingzhi' || counter);
+        end if;
       end if;
       --yw_lsxingzhi end
     END LOOP;
@@ -113,6 +130,7 @@ begin
       end if;
       --yw_cangkuinit end
       --yw_lsxingzhi end
+      /*
       SELECT count(*)
         INTO count_grainattr
         FROM yw_lsxingzhi
@@ -120,15 +138,31 @@ begin
       if count_grainattr is null or count_grainattr = 0 then
         select minid
           into grainattr_id
-          from (select count(*) count_name, name, min(id) minid
-                  from yw_lsxingzhi
-                 where name = v_name
-                 group by name)
-         where rownum = 1
-         order by count_name;
+          from (select minid
+                  from (select count(*) count_code, name, min(id) minid
+                          from yw_lsxingzhi
+                         where t_code = v_code
+                         group by name)
+                 order by count_code desc)
+         where rownum = 1;
         update yw_lsxingzhi set id = counter where id = grainattr_id;
         DBMS_OUTPUT.PUT_LINE('update yw_lsxingzhi');
+      else
+        select name, minid
+          into grainattr_name, grainattr_id
+          from (select name, minid
+                  from (select count(*) count_code, name, min(id) minid
+                          from yw_lsxingzhi
+                         where t_code = v_code
+                         group by name)
+                 order by count_code desc)
+         where rownum = 1;
+        if (counter != grainattr_id) then
+          update yw_lsxingzhi set name = grainattr_name where id = counter;
+          DBMS_OUTPUT.PUT_LINE('update yw_lsxingzhi' || counter);
+        end if;
       end if;
+      */
       --yw_lsxingzhi end
     END LOOP;
   end if;

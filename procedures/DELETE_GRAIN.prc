@@ -31,6 +31,7 @@ begin
     if (count_cangkuinit = 0 and count_crtongcang = 0 and
        count_INSTORERECORD = 0 and count_LXYPJY = 0) then
       delete yw_foodleibie where id <= counterStatic;
+      DBMS_OUTPUT.PUT_LINE('delete yw_foodleibie');
       commit;
     else
       DBMS_OUTPUT.PUT_LINE('refid<=' || counterStatic);

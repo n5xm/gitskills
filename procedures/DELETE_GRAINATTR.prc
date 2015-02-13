@@ -13,8 +13,8 @@ begin
    where xingzhi_id <= counterStatic;
   if count_grainattr > 0 then
     if (count_cangkuinit = 0) then
-      DBMS_OUTPUT.PUT_LINE('delete yw_lsxingzhi');
       delete yw_lsxingzhi where id <= counterStatic;
+      DBMS_OUTPUT.PUT_LINE('delete yw_lsxingzhi');
       commit;
     else
       DBMS_OUTPUT.PUT_LINE('refid<=' || counterStatic);
