@@ -105,7 +105,7 @@ grant create procedure to szla;
 exp szla/ictehi@szla file=c:\szla_206_20150204.dmp
 exp grainup/ictehi@grainup file=c:\grainup_206_20150204.dmp
 exp graindc/123456@graindc file=c:\graindc_206_20150204.dmp
-exp szla/ictehi@szla file=c:\szla_206_20150204.dmp
+exp grain/ictehi@grain file=c:\grain_25_20150226.dmp
 
 ====================================================MySQL start
 mysqldump -u root -p teststruts>D:teststruts.sql
